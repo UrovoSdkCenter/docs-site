@@ -15,12 +15,12 @@ hero:
 
 features:
   - title: Integration Guide
-    details: Full guides for printing, scanning, customer display, payment, and more.
+    details: Full guides for printing, scanning, RFID, customer display, payment, and more.
     link: /en/guide/quick-start
+  - title: RFID Development
+    details: Android RFID SDK overview, integration, and Demo download.
+    link: /en/rfid/
   - title: Hardware Products
     details: Device specs and hardware-related documentation.
     link: /en/hardware/
-  - title: Software
-    details: Software product docs and integration notes.
-    link: /en/software/
 ---

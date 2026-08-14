@@ -48,6 +48,15 @@ const zhSidebar = [
           { text: '接入示例', link: '/scanning/sample' }
         ]
       },
+      {
+        text: 'RFID 开发',
+        collapsed: false,
+        items: [
+          { text: 'RFID 概述', link: '/rfid/' },
+          { text: '下载与 Demo', link: '/rfid/download' },
+          { text: '快速接入', link: '/rfid/quick-start' }
+        ]
+      },
       { text: '副屏开发', link: '/customer-display' },
       { text: '称重开发', link: '/electronic-scale' },
       { text: '读卡开发', link: '/card-reader' },
@@ -103,6 +112,15 @@ const enSidebar = [
         items: [
           { text: 'Overview', link: '/en/scanning/' },
           { text: 'Integration Sample', link: '/en/scanning/sample' }
+        ]
+      },
+      {
+        text: 'RFID Development',
+        collapsed: false,
+        items: [
+          { text: 'RFID Overview', link: '/en/rfid/' },
+          { text: 'Download & Demo', link: '/en/rfid/download' },
+          { text: 'Quick Start', link: '/en/rfid/quick-start' }
         ]
       },
       { text: 'Customer Display Development', link: '/en/customer-display' },

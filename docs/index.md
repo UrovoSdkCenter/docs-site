@@ -15,12 +15,12 @@ hero:
 
 features:
   - title: 集成开发指南
-    details: 打印、扫码、副屏、支付等完整开发指引。
+    details: 打印、扫码、RFID、副屏、支付等完整开发指引。
     link: /guide/quick-start
+  - title: RFID 开发
+    details: Android RFID SDK 概述、接入与 Demo 下载。
+    link: /rfid/
   - title: 硬件产品
     details: 设备规格与硬件相关说明。
     link: /hardware/
-  - title: 软件产品
-    details: 软件产品文档与接入说明。
-    link: /software/
 ---
