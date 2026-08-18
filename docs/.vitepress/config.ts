@@ -57,6 +57,15 @@ const zhSidebar = [
           { text: '快速接入', link: '/rfid/quick-start' }
         ]
       },
+      {
+        text: '贴标机开发',
+        collapsed: false,
+        items: [
+          { text: 'K388Pro', link: '/label-printer/k388pro' },
+          { text: 'K388Pro 蓝牙版本', link: '/label-printer/k388pro-ble' },
+          { text: '下载 SDK / Demo', link: '/label-printer/download' }
+        ]
+      },
       { text: '副屏开发', link: '/customer-display' },
       { text: '称重开发', link: '/electronic-scale' }
     ]
@@ -113,6 +122,15 @@ const enSidebar = [
           { text: 'RFID Overview', link: '/en/rfid/' },
           { text: 'Download & Demo', link: '/en/rfid/download' },
           { text: 'Quick Start', link: '/en/rfid/quick-start' }
+        ]
+      },
+      {
+        text: 'Label Printer Development',
+        collapsed: false,
+        items: [
+          { text: 'K388Pro', link: '/en/label-printer/k388pro' },
+          { text: 'K388Pro BLE', link: '/en/label-printer/k388pro-ble' },
+          { text: 'Download SDK / Demo', link: '/en/label-printer/download' }
         ]
       },
       { text: 'Customer Display Development', link: '/en/customer-display' },
