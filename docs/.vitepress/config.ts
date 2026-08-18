@@ -58,15 +58,7 @@ const zhSidebar = [
         ]
       },
       { text: '副屏开发', link: '/customer-display' },
-      { text: '称重开发', link: '/electronic-scale' },
-      { text: '读卡开发', link: '/card-reader' },
-      { text: '钱箱开发', link: '/cash-drawer' },
-      { text: '状态灯开发', link: '/status-light' },
-      { text: '指纹开发', link: '/fingerprint' },
-      { text: '安卓设备间通信连接开发', link: '/android-device-connection' },
-      { text: '收款音箱开发', link: '/payment-sound-box' },
-      { text: '电子价签开发', link: '/electronic-price-tag' },
-      { text: '生物识别（指纹）开发指南', link: '/biometric-fingerprint' }
+      { text: '称重开发', link: '/electronic-scale' }
     ]
   }
 ]
@@ -124,15 +116,7 @@ const enSidebar = [
         ]
       },
       { text: 'Customer Display Development', link: '/en/customer-display' },
-      { text: 'Electronic Scale Development', link: '/en/electronic-scale' },
-      { text: 'Card Reader Development', link: '/en/card-reader' },
-      { text: 'Cash Drawer Development', link: '/en/cash-drawer' },
-      { text: 'Status Light Development', link: '/en/status-light' },
-      { text: 'Fingerprints Development', link: '/en/fingerprint' },
-      { text: 'Android Device Connection Development', link: '/en/android-device-connection' },
-      { text: 'Payment Sound Box Development', link: '/en/payment-sound-box' },
-      { text: 'Electronic Price Tag Development', link: '/en/electronic-price-tag' },
-      { text: 'Biometric (Fingerprint) Development Guide', link: '/en/biometric-fingerprint' }
+      { text: 'Electronic Scale Development', link: '/en/electronic-scale' }
     ]
   }
 ]
