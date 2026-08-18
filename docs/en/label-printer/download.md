@@ -17,4 +17,4 @@ Browse folder: https://github.com/UrovoSdkCenter/docs-site/tree/main/downloads/k
 
 1. Put the JAR in your Android module `libs` folder.
 2. Unzip the Demo and open `BtScanPrintDemo` in Android Studio.
-3. Online guide: [K388Pro BLE](/en/label-printer/k388pro-ble).
+3. Online guide: [K388Pro BLE](/en/label-printer/k388pro-ble/).

@@ -17,4 +17,4 @@
 
 1. 将 JAR 放到 Android 模块的 `libs` 目录。
 2. 解压 Demo 后用 Android Studio 打开 `BtScanPrintDemo`。
-3. 在线开发指南见 [K388Pro 蓝牙版本](/label-printer/k388pro-ble)。
+3. 在线开发指南见 [K388Pro 蓝牙版本](/label-printer/k388pro-ble/)。

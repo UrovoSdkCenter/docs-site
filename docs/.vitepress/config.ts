@@ -62,7 +62,31 @@ const zhSidebar = [
         collapsed: false,
         items: [
           { text: 'K388Pro', link: '/label-printer/k388pro' },
-          { text: 'K388Pro 蓝牙版本', link: '/label-printer/k388pro-ble' },
+          {
+            text: 'K388Pro 蓝牙版本',
+            collapsed: false,
+            items: [
+              { text: '概述', link: '/label-printer/k388pro-ble/' },
+              { text: '接入', link: '/label-printer/k388pro-ble/integration' },
+              { text: '快速开始', link: '/label-printer/k388pro-ble/quick-start' },
+              {
+                text: 'API 参考',
+                collapsed: false,
+                items: [
+                  { text: '接口总览', link: '/label-printer/k388pro-ble/api/' },
+                  { text: '初始化', link: '/label-printer/k388pro-ble/api/init' },
+                  { text: '连接', link: '/label-printer/k388pro-ble/api/connection' },
+                  { text: '发送打印数据', link: '/label-printer/k388pro-ble/api/print' },
+                  { text: '状态与固件', link: '/label-printer/k388pro-ble/api/status' },
+                  { text: '页面设置', link: '/label-printer/k388pro-ble/api/page' },
+                  { text: '绘制', link: '/label-printer/k388pro-ble/api/drawing' },
+                  { text: '打印设置', link: '/label-printer/k388pro-ble/api/settings' }
+                ]
+              },
+              { text: '示例', link: '/label-printer/k388pro-ble/samples' },
+              { text: '注意事项与 FAQ', link: '/label-printer/k388pro-ble/faq' }
+            ]
+          },
           { text: '下载 SDK / Demo', link: '/label-printer/download' }
         ]
       },
@@ -129,7 +153,31 @@ const enSidebar = [
         collapsed: false,
         items: [
           { text: 'K388Pro', link: '/en/label-printer/k388pro' },
-          { text: 'K388Pro BLE', link: '/en/label-printer/k388pro-ble' },
+          {
+            text: 'K388Pro BLE',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/en/label-printer/k388pro-ble/' },
+              { text: 'Integration', link: '/en/label-printer/k388pro-ble/integration' },
+              { text: 'Quick Start', link: '/en/label-printer/k388pro-ble/quick-start' },
+              {
+                text: 'API Reference',
+                collapsed: false,
+                items: [
+                  { text: 'Overview', link: '/en/label-printer/k388pro-ble/api/' },
+                  { text: 'Initialization', link: '/en/label-printer/k388pro-ble/api/init' },
+                  { text: 'Connection', link: '/en/label-printer/k388pro-ble/api/connection' },
+                  { text: 'Send print data', link: '/en/label-printer/k388pro-ble/api/print' },
+                  { text: 'Status and firmware', link: '/en/label-printer/k388pro-ble/api/status' },
+                  { text: 'Page setup', link: '/en/label-printer/k388pro-ble/api/page' },
+                  { text: 'Drawing', link: '/en/label-printer/k388pro-ble/api/drawing' },
+                  { text: 'Print settings', link: '/en/label-printer/k388pro-ble/api/settings' }
+                ]
+              },
+              { text: 'Samples', link: '/en/label-printer/k388pro-ble/samples' },
+              { text: 'Notes & FAQ', link: '/en/label-printer/k388pro-ble/faq' }
+            ]
+          },
           { text: 'Download SDK / Demo', link: '/en/label-printer/download' }
         ]
       },
@@ -143,10 +191,11 @@ export default defineConfig({
   title: '集成开发指南',
   description: '产品 SDK 与开发文档',
   lastUpdated: true,
-  cleanUrls: true,
+  // 离线包需带 .html 后缀，否则解压后无法跳转
+  cleanUrls: process.env.OFFLINE !== '1',
 
-  // GitHub Pages: https://urovosdkcenter.github.io/docs-site/
-  base: '/docs-site/',
+  // GitHub Pages 用 /docs-site/；离线包用相对路径 ./
+  base: process.env.OFFLINE === '1' ? './' : '/docs-site/',
 
   locales: {
     root: {

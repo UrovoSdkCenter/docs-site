@@ -32,6 +32,8 @@ npm run build
 
 ## 发布到 GitHub Pages
 
+日常提交步骤见仓库根目录 [提交步骤.md](./提交步骤.md)（仅供开发者查看，不进入文档站菜单）。
+
 1. 将本目录推送到 GitHub 仓库
 2. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**
 3. 若站点 URL 为 `https://<user>.github.io/<repo>/`，在 `config.ts` 中设置：
