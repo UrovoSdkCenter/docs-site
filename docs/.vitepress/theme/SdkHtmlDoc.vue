@@ -81,5 +81,6 @@ onMounted(() => {
   height: calc(100vh - var(--vp-nav-height, 64px));
   border: 0;
   background: #eef1f4;
+  vertical-align: top;
 }
 </style>

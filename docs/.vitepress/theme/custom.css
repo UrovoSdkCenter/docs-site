@@ -1,4 +1,4 @@
-/* 收窄左侧菜单 */
+/* Narrow left sidebar */
 :root {
   --vp-sidebar-width: 220px;
 }
@@ -33,4 +33,64 @@
   .VPDoc.has-sidebar .content {
     padding-left: 24px !important;
   }
+}
+
+/* ---------- API HTML fullscreen: hide left menu, show only embedded doc ---------- */
+html.sdk-html-mode .VPSidebar,
+html.sdk-html-mode .VPLocalNav,
+html.sdk-html-mode .VPDocAsideOutline,
+html.sdk-html-mode .aside,
+html.sdk-html-mode .VPDocFooter {
+  display: none !important;
+}
+
+html.sdk-html-mode .VPContent.has-sidebar,
+html.sdk-html-mode .VPNavBar.has-sidebar .wrapper,
+html.sdk-html-mode .VPNavBar.has-sidebar .container,
+html.sdk-html-mode .VPNavBar.has-sidebar .title,
+html.sdk-html-mode .VPNavBar.has-sidebar .content {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+html.sdk-html-mode .VPNavBar.has-sidebar .content {
+  padding-right: 0 !important;
+}
+
+html.sdk-html-mode .VPContent {
+  padding-top: var(--vp-nav-height, 64px) !important;
+}
+
+html.sdk-html-mode .VPPage,
+html.sdk-html-mode .VPDoc,
+html.sdk-html-mode .VPDoc .container,
+html.sdk-html-mode .VPDoc .content,
+html.sdk-html-mode .VPDoc .content-container,
+html.sdk-html-mode .vp-doc {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html.sdk-html-mode .VPDoc .content .content-container {
+  margin: 0 !important;
+}
+
+html.sdk-html-mode #VPContent,
+html.sdk-html-mode .Layout {
+  --vp-layout-max-width: 100%;
+}
+
+html.sdk-html-mode .sdk-html-doc {
+  width: 100%;
+  max-width: 100%;
+  min-height: calc(100vh - var(--vp-nav-height, 64px));
+  height: calc(100vh - var(--vp-nav-height, 64px));
+}
+
+/* Emphasize the temporary Download & Demo nav shortcut on API pages */
+html.sdk-html-mode .VPNavBarMenuLink.is-download-shortcut {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
 }

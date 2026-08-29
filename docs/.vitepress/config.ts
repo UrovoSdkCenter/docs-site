@@ -165,6 +165,7 @@ export default defineConfig({
       title: 'Documentation',
       description: 'Integration Guide',
       themeConfig: {
+        siteTitle: false,
         nav: [
           { text: 'Docs Home', link: '/' },
           { text: 'Integration Guide', link: '/guide/quick-start' }
@@ -185,6 +186,7 @@ export default defineConfig({
       description: '集成开发指南',
       link: '/zh/',
       themeConfig: {
+        siteTitle: false,
         nav: [
           { text: '首页', link: '/zh/' },
           { text: '集成开发指南', link: '/zh/guide/quick-start' }
