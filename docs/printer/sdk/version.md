@@ -1,3 +1,3 @@
-# SDK版本说明
+# SDK Version Notes
 
-打印 SDK 版本历史与兼容性说明。
+Printer SDK version history and compatibility.

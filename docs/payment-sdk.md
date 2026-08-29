@@ -1,13 +1,7 @@
-# 金融设备支付SDK
+# Payment SDK Development
 
-金融设备支付能力接入与接口说明。
+Payment SDK integration for financial devices.
 
-## 概述
+## Overview
 
-本章对应 **金融设备支付SDK**，用于支付相关设备与业务对接。
-
-## 待补充
-
-- SDK 下载与版本说明
-- 初始化与回调
-- 交易流程示例
+This page mirrors **Payment SDK Development**. Add download links, init flow, and transaction samples here.

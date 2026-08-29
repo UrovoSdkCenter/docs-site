@@ -1,19 +1,19 @@
-# 注意事项与 FAQ
+# Notes & FAQ
 
-## 注意事项
+## Notes
 
-1. `draw*` 只组页，必须再调用 `printByData` / `printByGzipData` / `printByText` 才会打印。
-2. BLE 收发和固件升级请放在子线程。
-3. 文本按 GBK 编码。
-4. 页宽建议不超过可打宽度（约 384~400 点）。
-5. 固件升级完成后必须重新 `connect`。
-6. 本版本无 RFID 接口。
-7. 组页 API 为 CPCL，不是 ZPL 封装。
+1. `draw*` only builds the page—you must call `printByData` / `printByGzipData` / `printByText` to print.
+2. Run BLE I/O and firmware upgrade on a background thread.
+3. Text is encoded as GBK.
+4. Keep page width within the printable width (about 384–400 dots).
+5. After firmware upgrade, call `connect` again.
+6. This version does not provide RFID APIs.
+7. Page APIs are CPCL, not a ZPL wrapper.
 
-异常类：`com.urovo.printer.exception.PrinterException`  
-日志过滤关键字：`>>`
+Exception class: `com.urovo.printer.exception.PrinterException`  
+Log filter: `>>`
 
-## 回调接口
+## Callbacks
 
 ```java
 public interface BleConnectionListener {
@@ -28,19 +28,19 @@ public interface FirmwareUpgradeListener {
 }
 ```
 
-## 常见问题
+## FAQ
 
-**问：`printByData` 在蓝牙版能直接调用吗？**  
-答：可以。先 `connect`，再组页或直接传入字节。
+**Q: Can I call `printByData` directly on the BLE SDK?**  
+A: Yes. Connect first, then build a page or pass existing bytes.
 
-**问：调用了 `drawText`，但没有出纸。**  
-答：绘制接口只负责组页。需要先调用 `printByte`，再调用 `printByData` 或 `printByGzipData`。
+**Q: I called `drawText`, but nothing printed.**  
+A: Drawing APIs only build the page. Call `printByte`, then `printByData` or `printByGzipData`.
 
-**问：是否支持 ZPL？**  
-答：组页 API 为 CPCL。若固件接受 ZPL，仅可用 `printByText` / `printByData` 发送原文。
+**Q: Is ZPL supported?**  
+A: Page APIs are CPCL. Raw ZPL may be sent with `printByText` / `printByData` only if firmware accepts it.
 
-**问：连接成功，但打印没有反应。**  
-答：确认蓝牙权限和 MAC 地址，再用 `getPrinterStatus()` 检查是否缺纸或开盖。
+**Q: Connection succeeds, but printing does nothing.**  
+A: Confirm Bluetooth permissions and the MAC address, then check `getPrinterStatus()` for paper or cover errors.
 
-**问：图片上方或右侧有空白。**  
-答：将页面宽度缩小到可打印区域（例如 384 点），并确认标签方向与 `pageSetup` 的宽高一致。图片页建议使用 `printByGzipData`；丢包时可 `setPacketGapMs(150)`。
+**Q: The image has blank space on the top or right.**  
+A: Reduce page width to the printable area (for example 384 dots) and make sure label orientation matches `pageSetup` width and height. Prefer `printByGzipData` for image pages; if packets drop, try `setPacketGapMs(150)`.

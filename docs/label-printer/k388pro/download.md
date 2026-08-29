@@ -1,15 +1,15 @@
-# 下载和 Demo
+# Download & Demo
 
-本页提供 K388Pro **本机打印** SDK 的离线 API 文档。文件在仓库目录 `downloads/k388pro/`。
+Offline API documentation for the K388Pro **built-in printer** SDK. Files are under `downloads/k388pro/`.
 
-## 下载列表
+## Downloads
 
-| 文件 | 说明 | 下载 |
-|------|------|------|
-| `k388-printer-sdk-docs.html` | 离线 API 文档（双击用浏览器打开） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-docs.html) |
+| File | Description | Download |
+|------|-------------|----------|
+| `k388-printer-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-docs.zip) |
 
-## 使用说明
+## Usage
 
-1. 离线 API 文档为单页 HTML，本地双击即可浏览（含中英切换与 API 检索）。
-2. 在线 API 参考见 [API 参考](/label-printer/k388pro/)。
-3. 蓝牙外接版本见 [K388Pro 蓝牙版本](/label-printer/k388pro-ble/)。
+1. Download the zip, extract it, then open the HTML locally in a browser (ZH/EN switch and API search included).
+2. Online API reference: [API Reference](/label-printer/k388pro/).
+3. Bluetooth version: [K388Pro BLE](/label-printer/k388pro-ble/).

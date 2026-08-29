@@ -1,16 +1,16 @@
-# 下载和 Demo
+# Download & Demo
 
-本页提供 POS Printer SDK 包与离线 API 文档。文件在仓库目录 `downloads/pos/`。
+POS Printer SDK package and offline API documentation. Files are under `downloads/pos/`.
 
-## 下载列表
+## Downloads
 
-| 文件 | 说明 | 下载 |
-|------|------|------|
-| `UrovoPrinterSdk_v1.0.6.7z` | POS Printer SDK 包（v1.0.6） | [下载 SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/pos/UrovoPrinterSdk_v1.0.6.7z) |
-| `urovo-pos-printer-api.html` | 离线 API 文档（双击用浏览器打开） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/pos/urovo-pos-printer-api.html) |
+| File | Description | Download |
+|------|-------------|----------|
+| `UrovoPrinterSdk_v1.0.6.7z` | POS Printer SDK package (v1.0.6) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/pos/UrovoPrinterSdk_v1.0.6.7z) |
+| `urovo-pos-printer-api.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/pos/urovo-pos-printer-api.zip) |
 
-## 使用说明
+## Usage
 
-1. 解压 SDK 包，按包内说明将 AAR / 模块接入工程。
-2. 离线 API 文档为单页 HTML，本地双击即可浏览。
-3. 在线 API 参考见 [API 参考](/printer/pos/)。
+1. Extract the SDK package and integrate the AAR / module as described inside.
+2. Download the zip, extract it, then open the HTML locally in a browser.
+3. Online API reference: [API Reference](/printer/pos/).

@@ -1,7 +1,7 @@
-# 指纹开发
+# Fingerprints Development
 
-指纹模块相关开发指南。
+Fingerprint module development guide.
 
-## 概述
+## Overview
 
-本章对应 **指纹开发**。另见 [生物识别（指纹）开发指南](/biometric-fingerprint)。
+This page mirrors **Fingerprints Development**. See also [Biometric (Fingerprint) Development Guide](/biometric-fingerprint).

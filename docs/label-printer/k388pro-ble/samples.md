@@ -1,6 +1,6 @@
-# 示例
+# Samples
 
-## 文本 + 条码标签
+## Text + barcode label
 
 ```java
 BlePrinterManager printer = BlePrinterManager.getInstance(context);
@@ -17,7 +17,7 @@ printer.printByData(data);
 printer.disconnect();
 ```
 
-## 图片打印
+## Image print
 
 ```java
 printer.connect(mac);
@@ -28,7 +28,7 @@ byte[] data = printer.printByte(0, 1);
 printer.printByGzipData(data);
 ```
 
-## 二维码
+## QR code
 
 ```java
 printer.pageSetup(384, 384);
@@ -38,7 +38,7 @@ byte[] data = printer.printByte(0, 1);
 printer.printByData(data);
 ```
 
-## 打印前检查状态
+## Check status before printing
 
 ```java
 PrinterStatus status = printer.getPrinterStatus();
@@ -51,7 +51,7 @@ byte[] data = printer.printByte(0, 1);
 printer.printByGzipData(data);
 ```
 
-## 打印参数设置
+## Print settings
 
 ```java
 printer.connect(mac);
@@ -61,7 +61,7 @@ printer.setMultiPrintDelay(100);
 printer.setRewindPrint(false);
 ```
 
-## 自定义 CPCL
+## Custom CPCL
 
 ```java
 String cpcl =

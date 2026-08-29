@@ -1,4 +1,4 @@
-# 快速开始
+# Quick Start
 
 ```java
 UPrinterManager printer = UPrinterManager.getInstance(context);
@@ -16,8 +16,8 @@ try {
 }
 ```
 
-步骤：`getInstance` → `connect` → `pageSetup` / `draw*` 组页 → `printByte` 取数据 → `printByData` 发送 → `disconnect`。
+Flow: `getInstance` → `connect` → `pageSetup` / `draw*` → `printByte` → `printByData` → `disconnect`.
 
-成功标志：`printByData` 返回 `true`，打印机出纸。`pageSetup` / `drawText` **不会**单独出纸。
+Success: `printByData` returns `true` and paper feeds. `pageSetup` / `drawText` alone **do not** print.
 
-下一步：[API 参考](/label-printer/k388pro/api/)
+Next: [API Reference](/label-printer/k388pro/api/)

@@ -1,7 +1,7 @@
-# 副屏开发
+# Customer Display Development
 
-副屏（客显）相关开发指南。
+Customer display (secondary screen) development guide.
 
-## 概述
+## Overview
 
-本章对应 **副屏开发**，可在此补充副屏显示、双屏交互与示例。
+This page mirrors **Customer Display Development**.

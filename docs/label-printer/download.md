@@ -1,7 +1,7 @@
-# 下载和 Demo
+# Download & Demo
 
-K388Pro 蓝牙版本的下载已迁移至独立页面。
+Downloads for K388Pro BLE have moved to a dedicated page.
 
-请前往：[K388Pro 蓝牙 — 下载和 Demo](/label-printer/k388pro-ble/download)
+Go to: [K388Pro BLE — Download & Demo](/label-printer/k388pro-ble/download)
 
-本机打印版本见：[K388Pro — 下载和 Demo](/label-printer/k388pro/download)
+Built-in printer: [K388Pro — Download & Demo](/label-printer/k388pro/download)

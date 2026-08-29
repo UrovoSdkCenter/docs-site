@@ -1,7 +1,7 @@
-# 走纸与布局
+# Feed and layout
 
 | Method | Description |
 | --- | --- |
-| void feedLine(int lines) | 走纸行数；0 底部留白；-1 底部不留白 |
-| void addBlankLine(int height) | 添加指定高度空白 |
-| void addBlackLine(int... lineHeight) | 添加分隔/空行，可变参数行距 |
+| void feedLine(int lines) | Feed lines; 0 adds bottom margin; -1 no bottom margin |
+| void addBlankLine(int height) | Blank area with given height |
+| void addBlackLine(int... lineHeight) | Separator / blank lines with optional line heights |

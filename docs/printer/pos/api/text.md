@@ -1,32 +1,32 @@
-# 文本打印
+# Text printing
 
 ## PrinterProviderImpl.addText
 
-按指定格式添加一行文本。
+Adds one line of text with the given format.
 
-### 签名
+### Signature
 
 ```java
 void addText(Bundle format, String text)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| format | Bundle | 是 | 字体与排版，键见 PrintFormat |
-| text | String | 是 | 打印文本 |
+| format | Bundle | Yes | Font and layout keys — see PrintFormat |
+| text | String | Yes | Text to print |
 
-`` **format 常用键**
+`` **Common format keys**
 
-| 键 | 类型 | 说明 |
+| Key | Type | Description |
 | --- | --- | --- |
-| PrintFormat.FONT | int | 0 小 / 1 正常 / 2 大，默认 1 |
-| PrintFormat.FONTBOLD | boolean | 加粗，默认 false |
-| PrintFormat.ALIGN | int | 0 左 / 1 中 / 2 右 |
-| PrintFormat.FONTNAME | String | 自定义 TTF 路径，如 /sdcard/xxx.ttf |
-| PrintFormat.FONTSIZE | int | 指定字号时忽略 FONT |
-| PrintFormat.LINEHEIGHT | int | 行距 |
+| PrintFormat.FONT | int | 0 small / 1 normal / 2 large, default 1 |
+| PrintFormat.FONTBOLD | boolean | Bold, default false |
+| PrintFormat.ALIGN | int | 0 left / 1 center / 2 right |
+| PrintFormat.FONTNAME | String | Custom TTF path, e.g. /sdcard/xxx.ttf |
+| PrintFormat.FONTSIZE | int | When set, ignores FONT tier |
+| PrintFormat.LINEHEIGHT | int | Line spacing |
 
-### 示例
+### Example
 
 ```java
 Bundle fmt = new Bundle();
@@ -37,25 +37,25 @@ printer.addText(fmt, "Item A    $9.99");
 
 ## PrinterProviderImpl.addTextLeft_Right
 
-一行左右两栏文本（推荐：Bundle 重载）。
+Left/right two-column line (recommended: Bundle overload).
 
-### 签名
+### Signature
 
 ```java
 void addTextLeft_Right(Bundle format, String textLeft, String textRight)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| format | Bundle | 是 | 同 addText |
-| textLeft | String | 是 | 左栏内容 |
-| textRight | String | 是 | 右栏内容 |
+| format | Bundle | Yes | Same as addText |
+| textLeft | String | Yes | Left column |
+| textRight | String | Yes | Right column |
 
 ## PrinterProviderImpl.addTextLeft_Center_Right
 
-一行左/中/右三栏文本（推荐：Bundle 重载）。
+Left/center/right three-column line (recommended: Bundle overload).
 
-### 签名
+### Signature
 
 ```java
 void addTextLeft_Center_Right(Bundle format, String textLeft, String textCenter, String textRight)
@@ -63,7 +63,7 @@ void addTextLeft_Center_Right(Bundle format, String textLeft, String textCenter,
 
 | Method | Description |
 | --- | --- |
-| void addTextLeft_Right(String textLeft, String textRight, int font, boolean fontBold) | 已废弃，请用 Bundle 版 |
-| void addTextLeft_Center_Right(String textLeft, String textCenter, String textRight, int font, boolean fontBold) | 已废弃，请用 Bundle 版 |
+| void addTextLeft_Right(String textLeft, String textRight, int font, boolean fontBold) | Deprecated — use Bundle overload |
+| void addTextLeft_Center_Right(String textLeft, String textCenter, String textRight, int font, boolean fontBold) | Deprecated — use Bundle overload |
 
-``****``**** **待确认：** 规范文档写作 `addTextLeft_Right_Center`，实际 Java 方法名为 `addTextLeft_Center_Right`。
+``****``**** **Pending confirmation:** The spec names this API `addTextLeft_Right_Center`; the Java SDK uses `addTextLeft_Center_Right`.

@@ -1,3 +1,3 @@
-# 打印标签小票接口
+# APIs for Labels & Receipts
 
-标签 / 小票打印相关接口说明。
+Label and receipt printing APIs.

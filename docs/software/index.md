@@ -1,3 +1,3 @@
-# 软件产品
+# Software
 
-软件产品文档入口（对应顶部菜单「软件产品」）。
+Software products entry (top nav: Software).

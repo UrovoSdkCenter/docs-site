@@ -1,25 +1,25 @@
-# 连接与状态
+# Connection and status
 
-## 连接
+## Connection
 
-| 方法 | 说明 |
-|------|------|
-| `connect()` | 打开本机打印通道。已连接或正在升级固件时抛 `PrinterException`。 |
-| `disconnect()` | 断开打印通道。 |
-| `isConnected()` | 是否已连接。 |
-| `flushBuffer()` | 清空接收缓冲。 |
-| `setPrinterStatusListener(PrinterStatusListener listener)` | 设置连接/断开等监听。 |
+| Method | Description |
+|--------|-------------|
+| `connect()` | Opens the on-device print channel. Throws `PrinterException` if already connected or upgrading. |
+| `disconnect()` | Closes the print channel. |
+| `isConnected()` | Whether connected. |
+| `flushBuffer()` | Clears the receive buffer. |
+| `setPrinterStatusListener(PrinterStatusListener listener)` | Connection / disconnect listener. |
 
 ```java
 printer.connect();
 ```
 
-## 状态查询
+## Status
 
-| 方法 | 说明 |
-|------|------|
-| `getPrinterStatus()` | 查询打印机状态。未连接返回 `DISCONNECTED`；升级中返回 `UNKNOWN_ERROR`。 |
-| `getPrinterStatusDescription()` | 状态描述文本。 |
+| Method | Description |
+|--------|-------------|
+| `getPrinterStatus()` | Queries printer status. Returns `DISCONNECTED` if not connected; `UNKNOWN_ERROR` while upgrading. |
+| `getPrinterStatusDescription()` | Status description text. |
 
 ```java
 if (!printer.getPrinterStatus().isReady()) {
@@ -29,25 +29,25 @@ if (!printer.getPrinterStatus().isReady()) {
 
 ## PrinterStatus
 
-| 状态 | 含义 |
-|------|------|
-| `OK` | 正常可打印 |
-| `COVER_OPEN` | 开盖 |
-| `NO_PAPER` | 缺纸 |
-| `PAPER_ERROR` | 纸张错误 |
-| `UNKNOWN_ERROR` | 未知错误 |
-| `DISCONNECTED` | 未连接 |
-| `COMMUNICATION_ERROR` | 通信错误 |
-| `BUSY` | 忙（预留） |
-| `OVERHEATED` | 过热（预留） |
+| Status | Meaning |
+|--------|---------|
+| `OK` | Ready to print |
+| `COVER_OPEN` | Cover open |
+| `NO_PAPER` | Out of paper |
+| `PAPER_ERROR` | Paper error |
+| `UNKNOWN_ERROR` | Unknown error |
+| `DISCONNECTED` | Not connected |
+| `COMMUNICATION_ERROR` | Communication failed |
+| `BUSY` | Busy (reserved) |
+| `OVERHEATED` | Overheated (reserved) |
 
-辅助方法：`isReady()`、`hasError()`、`getDescription()`、`getSuggestedAction()`。
+Helpers: `isReady()`, `hasError()`, `getDescription()`, `getSuggestedAction()`.
 
 ## PrinterStatusListener
 
-| 方法 | 说明 |
-|------|------|
-| `onConnected()` | 连接成功 |
-| `onDisconnected()` | 断开 |
-| `onStatusChanged(PrinterStatus status)` | 状态变化 |
-| `onError(int errorCode, String errorMessage)` | 错误回调 |
+| Method | Description |
+|--------|-------------|
+| `onConnected()` | Connected |
+| `onDisconnected()` | Disconnected |
+| `onStatusChanged(PrinterStatus status)` | Status changed |
+| `onError(int errorCode, String errorMessage)` | Error callback |

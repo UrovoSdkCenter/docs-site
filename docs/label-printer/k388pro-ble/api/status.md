@@ -1,26 +1,26 @@
-# 状态与固件
+# Status and firmware
 
-| 方法 | 说明 |
-|------|------|
-| `getPrinterStatus()` | 查询打印机状态。 |
-| `getPrinterStatusDescription()` | 返回状态描述。 |
-| `getFirmwareVersion()` | 读取固件版本。失败返回 `null`。 |
-| `upgradeFirmware(String path)` | 升级固件（阻塞）。 |
-| `upgradeFirmware(String path, FirmwareUpgradeListener listener)` | 升级固件并回调进度。 |
+| Method | Description |
+|--------|-------------|
+| `getPrinterStatus()` | Queries printer status. |
+| `getPrinterStatusDescription()` | Returns the status description. |
+| `getFirmwareVersion()` | Reads firmware version. Returns `null` on failure. |
+| `upgradeFirmware(String path)` | Upgrades firmware (blocking). |
+| `upgradeFirmware(String path, FirmwareUpgradeListener listener)` | Upgrades firmware with progress. |
 
 ## PrinterStatus
 
-| 状态 | 含义 |
-|------|------|
-| `OK` | 可打印 |
-| `COVER_OPEN` | 开盖 |
-| `NO_PAPER` | 缺纸 |
-| `PAPER_ERROR` | 纸张异常 |
-| `DISCONNECTED` | 未连接 |
-| `COMMUNICATION_ERROR` | 通信失败 |
-| `UNKNOWN_ERROR` | 未知错误（含升级中） |
-| `BUSY` | 忙（预留） |
-| `OVERHEATED` | 过热（预留） |
+| Status | Meaning |
+|--------|---------|
+| `OK` | Ready to print |
+| `COVER_OPEN` | Cover open |
+| `NO_PAPER` | Out of paper |
+| `PAPER_ERROR` | Paper error |
+| `DISCONNECTED` | Not connected |
+| `COMMUNICATION_ERROR` | Communication failed |
+| `UNKNOWN_ERROR` | Unknown error (includes upgrading) |
+| `BUSY` | Busy (reserved) |
+| `OVERHEATED` | Overheated (reserved) |
 
 ```java
 PrinterStatus status = printer.getPrinterStatus();
@@ -29,7 +29,7 @@ if (!status.isReady()) {
 }
 ```
 
-## 固件升级
+## Firmware upgrade
 
 ```java
 printer.upgradeFirmware("/sdcard/firmware.upd",
@@ -46,4 +46,4 @@ printer.upgradeFirmware("/sdcard/firmware.upd",
         });
 ```
 
-升级为阻塞调用，请在工作线程中执行。升级完成后 SDK 会断开连接，打印前需重新 `connect`。
+Upgrade is blocking. Run it on a worker thread. The SDK disconnects after upgrade; reconnect before printing.

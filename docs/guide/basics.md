@@ -1,92 +1,92 @@
-# 开发指南与基础
+# Development guide and basics
 
-本页介绍在 Urovo 设备上开发时通用的环境、权限、调试与实践建议。各硬件能力（打印、扫码、RFID 等）的接口细节，请参阅对应产品文档。
+This page covers shared environment, permission, debugging, and practice guidance for Urovo device development. For hardware-specific APIs (print, scan, RFID, and so on), see the matching product docs.
 
-## 开发环境
+## Development environment
 
-建议使用以下环境，以减少兼容性问题：
+Use the following setup to reduce compatibility issues:
 
-| 项目 | 建议 |
-|------|------|
-| IDE | Android Studio 最新稳定版 |
-| JDK | 与 Android Gradle Plugin 要求一致（常见为 JDK 17） |
-| 构建工具 | 使用工程锁定的 Android Gradle Plugin 与 Gradle 版本 |
-| 真机 | 使用目标机型验证；模拟器通常无法覆盖打印机、扫头、RFID 等硬件能力 |
+| Item | Recommendation |
+|------|----------------|
+| IDE | Latest stable Android Studio |
+| JDK | Match the Android Gradle Plugin requirement (often JDK 17) |
+| Build tools | Keep the Android Gradle Plugin and Gradle versions pinned by the project |
+| Device | Validate on the target device; emulators usually cannot cover printer, scanner, or RFID hardware |
 
-在切换 SDK 大版本时，同时核对：
+When you upgrade a major SDK version, also verify:
 
-- `minSdk` / `targetSdk` 是否满足文档要求
-- 是否需要额外系统权限或签名能力
-- Demo 能否在同一台设备上正常运行
+- `minSdk` / `targetSdk` meet the documented requirements
+- Extra system permissions or signing capabilities, if any
+- The official Demo still runs on the same device
 
-## 权限与系统配置
+## Permissions and system configuration
 
-不同 SDK 依赖不同权限。接入前请按产品文档逐项核对，常见类别包括：
+Different SDKs need different permissions. Check the product docs before integration. Common categories include:
 
-- **蓝牙**：外接打印机、Sled RFID 等场景通常需要蓝牙与位置相关权限（视系统版本而定）
-- **存储**：固件升级、日志导出、字体或资源加载可能需要存储或媒体权限
-- **网络**：部分升级、远程配置或日志上报能力需要网络权限
-- **系统级能力**：部分设备 API 需要系统签名或厂商权限，普通三方应用无法直接调用
+- **Bluetooth**: external printers and Sled RFID often need Bluetooth and location-related permissions (depends on OS version)
+- **Storage**: firmware update, log export, fonts, or assets may need storage or media permissions
+- **Network**: some update, remote config, or log upload flows need network access
+- **System capabilities**: some device APIs require system signature or vendor privileges that third-party apps cannot use
 
-实践建议：
+Recommended practice:
 
-1. 在 `AndroidManifest.xml` 中声明文档要求的权限。
-2. 对运行时权限，在调用相关 API 之前完成申请与结果处理。
-3. 权限被拒绝时给出明确提示，并避免继续调用依赖该权限的接口。
+1. Declare the documented permissions in `AndroidManifest.xml`.
+2. Request runtime permissions before calling APIs that need them, and handle the result.
+3. If the user denies a permission, show a clear message and do not call dependent APIs.
 
-## 日志与调试
+## Logging and debugging
 
-联调时优先保留可复现信息：
+During integration, keep information that helps reproduce issues:
 
-1. **打开 SDK 日志**（若产品提供开关），保留时间戳、错误码与关键状态。
-2. **使用 `adb logcat`** 过滤应用包名与 SDK 相关 TAG。
-3. **记录环境信息**：机型、系统版本、SDK 版本、复现步骤。
-4. **先跑官方 Demo**：若 Demo 正常而业务工程异常，优先对比初始化顺序、权限与依赖版本。
+1. **Enable SDK logging** when the product provides a switch, and keep timestamps, error codes, and connection state.
+2. **Use `adb logcat`** filtered by your package name and SDK-related tags.
+3. **Record the environment**: device model, OS version, SDK version, and reproduction steps.
+4. **Run the official Demo first**: if the Demo works but your app fails, compare initialization order, permissions, and dependency versions.
 
-调试连接：
+Debugging connection:
 
-- USB 调试：确认已授权该电脑的调试请求
-- 无线调试：确认设备与电脑在同一网络，且端口可达
+- USB debugging: confirm the computer is authorized on the device
+- Wireless debugging: confirm the device and computer are on the same network and the port is reachable
 
-## 错误处理
+## Error handling
 
-调用 SDK 时，按文档处理返回值与回调：
+When you call SDK APIs, handle return values and callbacks as documented:
 
-- 区分**可重试错误**（短暂断连、忙状态）与**配置错误**（权限不足、参数非法、机型不支持）
-- 向用户展示可读提示，同时把原始错误码写入日志
-- 不要忽略初始化失败；初始化失败时不要继续调用业务接口
+- Separate **retryable errors** (brief disconnects, busy state) from **configuration errors** (missing permission, invalid arguments, unsupported model)
+- Show a readable message to users, and log the raw error code
+- Do not ignore initialization failures; do not call business APIs after a failed init
 
-## 版本与兼容
+## Versioning and compatibility
 
-发版前确认：
+Before release, confirm the following:
 
-| 检查项 | 说明 |
-|--------|------|
-| SDK 版本 | 与文档、Demo 使用同一正式版本 |
-| 固件 / 服务版本 | 打印、扫码、RFID 等能力可能依赖设备侧服务或固件 |
-| 混淆规则 | Release 构建按文档保留必要类与接口 |
-| 回归路径 | 至少覆盖初始化、主流程成功与一种失败场景 |
+| Check | Notes |
+|-------|------|
+| SDK version | Use the same official version as the docs and Demo |
+| Firmware / service version | Print, scan, and RFID features may depend on on-device services or firmware |
+| ProGuard / R8 rules | Keep required classes and interfaces for release builds |
+| Regression path | Cover initialization, one successful main flow, and one failure case |
 
-## 常见问题排查
+## Troubleshooting
 
-按以下顺序排查，通常能更快定位问题：
+Work through these checks in order:
 
-1. Demo 在同一设备上是否可用？
-2. SDK 版本、设备型号、系统版本是否在支持列表内？
-3. 权限是否已授予？初始化是否成功？
-4. 日志中的错误码是否能在产品 FAQ 中找到对应说明？
-5. 是否存在多个 SDK / 重复依赖导致类冲突？
+1. Does the Demo work on the same device?
+2. Are the SDK version, device model, and OS version supported?
+3. Are permissions granted, and did initialization succeed?
+4. Does the error code appear in the product FAQ?
+5. Are duplicate SDKs or conflicting dependencies present?
 
-仍无法解决时，向技术支持反馈时请附上：机型、系统版本、SDK 版本、复现步骤与关键日志。
+If you still need support, include the device model, OS version, SDK version, reproduction steps, and relevant logs.
 
-## 后续步骤
+## What’s next
 
-选择与你的业务对应的专题继续阅读：
+Continue with the guide that matches your product:
 
-- [快速入门](/guide/quick-start)
-- [Urovo 设备 API](/urovo-customer-api/)
-- [Print 开发](/printer/pos/)
-- [Cradle 开发](/cradle/)
-- [扫码开发](/scanning/)
-- [RFID 开发](/rfid/)
-- [贴标机开发](/label-printer/k388pro/)
+- [Quick start](/guide/quick-start)
+- [Urovo Device API](/urovo-customer-api/)
+- [Print development](/printer/pos/)
+- [Cradle development](/cradle/)
+- [Scanning development](/scanning/)
+- [RFID development](/rfid/)
+- [Label printer development](/label-printer/k388pro/)

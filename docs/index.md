@@ -2,22 +2,22 @@
 layout: home
 
 hero:
-  name: 文档
-  text: 集成开发指南
-  tagline: 硬件能力与 SDK 开发文档
+  name: Documentation
+  text: Integration Guide
+  tagline: Hardware capabilities and SDK documentation
   actions:
     - theme: brand
-      text: 快速入门
+      text: Quick Start
       link: /guide/quick-start
     - theme: alt
-      text: English
-      link: /en/
+      text: 中文
+      link: /zh/
 
 features:
-  - title: 集成开发指南
-    details: 打印、扫码、RFID、贴标机等完整开发指引。
+  - title: Integration Guide
+    details: Full guides for printing, scanning, RFID, label printers, and more.
     link: /guide/quick-start
-  - title: RFID 开发
-    details: Android RFID SDK 概述、接入与 Demo 下载。
+  - title: RFID Development
+    details: Android RFID SDK overview, integration, and Demo download.
     link: /rfid/
 ---

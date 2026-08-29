@@ -1,7 +1,7 @@
-# Urovo OpenAPI
+# UROVO OpenAPI
 
-开放平台 OpenAPI 接口说明。
+Open platform OpenAPI reference.
 
-## 概述
+## Overview
 
-本章对应 **Urovo OpenAPI**，可在此补充鉴权、接口列表与错误码。
+This page mirrors **UROVO OpenAPI**. Add auth, endpoints, and error codes here.

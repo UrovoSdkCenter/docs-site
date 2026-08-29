@@ -1,6 +1,6 @@
-# 示例
+# Examples
 
-## 示例 1：交易凭条（文本 + 二维码）
+## Example 1: Receipt with text and QR code
 
 ```java
 printer.initPrint();
@@ -21,11 +21,11 @@ int status = printer.startPrint();
 printer.close();
 ```
 
-## 示例 2：HTML 小票
+## Example 2: HTML receipt
 
-Demo 中 `startPrint_Html` 从 assets 读取 HTML，调用 `addHtml` 后 `startPrint()`。format 需设置合适 `WIDTH`（≤380）。
+The Demo `startPrint_Html` loads HTML from assets, calls `addHtml`, then `startPrint()`. Set `WIDTH` in format (≤380).
 
-## 示例 3：标签纸
+## Example 3: Label paper
 
 ```java
 if (printer.supportLabelPrint()) {

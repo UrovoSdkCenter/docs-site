@@ -1,32 +1,32 @@
-# 页面设置
+# Page setup
 
-| 方法 | 说明 |
-|------|------|
-| `pageSetup(int pageWidth, int pageHeight)` | 设置页面宽高，单位为点。 |
-| `pageSetup(int pageWidth, int pageHeight, int r, int gap)` | 设置页面尺寸、旋转和间隙检测。 |
-| `setPrintTime(int time)` | 打印份数，默认 1。 |
-| `printByte(int horizontal, int skip)` | 生成完整打印数据。**图片页必须使用此接口。** |
-| `print()` / `print(int horizontal, int skip)` | 生成 CPCL 字符串（适合纯文本页）。 |
-| `noPrint()` / `noPrint(int horizontal, int skip)` | 组页结束（FORM/PRINT），不经过 Manager 发送。 |
-| `getPrintPrintStr()` | 返回最近一次构建的指令字符串。 |
+| Method | Description |
+|--------|-------------|
+| `pageSetup(int pageWidth, int pageHeight)` | Sets page width and height in dots. |
+| `pageSetup(int pageWidth, int pageHeight, int r, int gap)` | Sets size, rotation, and gap detection. |
+| `setPrintTime(int time)` | Print copies, default 1. |
+| `printByte(int horizontal, int skip)` | Builds full print data. **Required for image pages.** |
+| `print()` / `print(int horizontal, int skip)` | Builds a CPCL string (text-only jobs). |
+| `noPrint()` / `noPrint(int horizontal, int skip)` | Ends the page (FORM/PRINT) without sending via Manager. |
+| `getPrintPrintStr()` | Last built command string. |
 
-## 旋转与间隙
+## Rotation and gap
 
-| 参数 | 取值 | 含义 |
-|------|------|------|
-| `r` | 0 / 1 / 2 / 3 | 不旋转 / 90° / 180° / 270° |
-| `gap` | 0 / 1 / 2 / 3 | 无 / 间隙 / 左黑标 / 右黑标 |
+| Param | Values | Meaning |
+|-------|--------|---------|
+| `r` | 0 / 1 / 2 / 3 | None / 90° / 180° / 270° |
+| `gap` | 0 / 1 / 2 / 3 | None / gap / left black mark / right black mark |
 
-## printByte 的 skip
+## printByte skip
 
-| skip | 含义 |
-|------|------|
-| 0 | 立即打印 |
-| 1 | 先检测间隙再打印（标签常用） |
-| 2 | 左黑标 |
-| 3 | 右黑标 |
+| skip | Meaning |
+|------|---------|
+| 0 | Print immediately |
+| 1 | Detect gap then print (common for labels) |
+| 2 | Left black mark |
+| 3 | Right black mark |
 
-`horizontal` 为预留参数，传入 `0`。
+`horizontal` is reserved; pass `0`.
 
 ```java
 printer.pageSetup(384, 240, 0, 1);

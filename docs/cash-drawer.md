@@ -1,7 +1,7 @@
-# 钱箱开发
+# Cash Drawer Development
 
-钱箱控制相关开发指南。
+Cash drawer control development guide.
 
-## 概述
+## Overview
 
-本章对应 **钱箱开发**。
+This page mirrors **Cash Drawer Development**.

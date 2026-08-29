@@ -1,12 +1,12 @@
-# 固件
+# Firmware
 
-| 方法 | 说明 |
-|------|------|
-| `getFirmWareVersion()` | 读取固件版本。失败或升级中返回 `null`。 |
-| `upgradeFirmware(String path)` | 升级固件（阻塞）。 |
-| `upgradeFirmware(String path, FirmwareUpgradeListener listener)` | 升级固件并回调进度。 |
+| Method | Description |
+|--------|-------------|
+| `getFirmWareVersion()` | Reads firmware version. Returns `null` on failure or while upgrading. |
+| `upgradeFirmware(String path)` | Upgrades firmware (blocking). |
+| `upgradeFirmware(String path, FirmwareUpgradeListener listener)` | Upgrades with progress callback. |
 
-升级为阻塞调用，请在工作线程中执行。完成后断开连接并等待约 25 秒重启，打印前需重新 `connect`。
+Upgrade is blocking—run on a worker thread. After completion the SDK disconnects and waits about 25 seconds for reboot; call `connect` again before printing.
 
 ```java
 printer.upgradeFirmware("/sdcard/firmware.upd",
@@ -25,13 +25,13 @@ printer.upgradeFirmware("/sdcard/firmware.upd",
 
 ## FirmwareUpgradeListener
 
-| 方法 | 说明 |
-|------|------|
-| `onProgress(int sentBytes, int totalBytes)` | 发送进度 |
-| `onCompleted()` | 发送结束且重启等待完成 |
+| Method | Description |
+|--------|-------------|
+| `onProgress(int sentBytes, int totalBytes)` | Send progress |
+| `onCompleted()` | Send finished and reboot wait done |
 
 ## PrinterException
 
-| 方法 | 说明 |
-|------|------|
-| `getErrorCode()` | 错误码（若构造时传入） |
+| Method | Description |
+|--------|-------------|
+| `getErrorCode()` | Error code if provided at construction |

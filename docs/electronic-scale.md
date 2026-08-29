@@ -1,7 +1,7 @@
-# 称重开发
+# Electronic Scale Development
 
-电子秤 / 称重能力开发指南。
+Electronic scale development guide.
 
-## 概述
+## Overview
 
-本章对应 **称重开发**。
+This page mirrors **Electronic Scale Development**.

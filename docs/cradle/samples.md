@@ -1,6 +1,6 @@
-# 示例
+# Samples
 
-## 解锁
+## Unlock
 
 ```java
 dock.setUnlockTimeSeconds(10);
@@ -12,7 +12,7 @@ dock.unlockCradle(new UnlockCallback() {
 });
 ```
 
-## 读取版本
+## Read versions
 
 ```java
 String model = dock.getCradleModel();
@@ -22,12 +22,12 @@ String serial = dock.getSerialNumber();
 int err = dock.getLastErrorCode();
 ```
 
-## 固件升级
+## Firmware upgrade
 
 ```java
-byte[] bin = ...; // 从存储加载 .bin，1..53248 字节
+byte[] bin = ...; // load .bin, 1..53248 bytes
 FirmwareUpgradeListener progress = (stage, current, total) -> {
-    // 在主线程更新 UI
+    // update UI on main thread
 };
 try {
     String newFw = dock.upgradeFirmware(bin, progress);
@@ -46,4 +46,4 @@ try {
 }
 ```
 
-在应用内用系统文件选择器选取 `.bin`，仅将字节传给 `upgradeFirmware`。协议内 YMODEM 文件名固定为 `firmware.bin`。
+Pick a `.bin` with the system file picker and pass bytes only to `upgradeFirmware`. The YMODEM file name inside the protocol is fixed as `firmware.bin`.

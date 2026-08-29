@@ -1,14 +1,14 @@
-# 下载和 Demo
+# Download & Demo
 
-本页提供 Urovo 设备 API（USDK Profile Service JAR）的离线 API 文档。文件在仓库目录 `downloads/urovocustomapi/`。
+Offline API documentation for Urovo Device API (USDK Profile Service JAR). Files live under `downloads/urovocustomapi/`.
 
-## 下载列表
+## Downloads
 
-| 文件 | 说明 | 下载 |
-|------|------|------|
-| `urovo-custom-api-sdk-docs.html` | 离线 API 文档（双击用浏览器打开，含完整方法签名与示例） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/urovocustomapi/urovo-custom-api-sdk-docs.html) |
+| File | Description | Link |
+|------|-------------|------|
+| `urovo-custom-api-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser; full signatures and samples) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/urovocustomapi/urovo-custom-api-sdk-docs.zip) |
 
-## 使用说明
+## Usage
 
-1. 下载 HTML 后，本地双击即可用浏览器离线浏览（支持中英文切换与搜索）。
-2. 在线 API 参考见 [API 参考](/urovo-customer-api/)。
+1. Download the zip, extract it, then open the HTML in a browser for offline browsing (bilingual UI and search).
+2. Online API reference: [API Reference](/urovo-customer-api/).

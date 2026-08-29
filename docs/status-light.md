@@ -1,7 +1,7 @@
-# 状态灯开发
+# Status Light Development
 
-状态灯控制相关开发指南。
+Status light control development guide.
 
-## 概述
+## Overview
 
-本章对应 **状态灯开发**。
+This page mirrors **Status Light Development**.

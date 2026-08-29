@@ -1,30 +1,30 @@
-# 注意事项与 FAQ
+# Notes & FAQ
 
-## 注意事项
-- **线程：** Demo 在后台线程调用打印；避免在主线程长时间阻塞。
-- **生命周期：** 规范建议每次打印完成后 `close()`，下次再 `initPrint()`，避免状态残留。
-- **宽度：** 图片/HTML 宽度不超过约 380～384 像素，否则可能被截断。
-- **顺序：** 必须先组内容再 `startPrint()`；返回后再进行下一次组单。
-- **废弃 API：** 不要使用无 Bundle 的左右/三栏文本重载。
+## Notes
+- **Threading:** The Demo runs print jobs on a background thread; avoid blocking the main thread.
+- **Lifecycle:** Close after each job and re-init before the next to avoid stale state.
+- **Width:** Keep image/HTML width within ~380–384 px to prevent clipping.
+- **Order:** Compose all content before `startPrint()`; wait for the result before the next job.
+- **Deprecated APIs:** Do not use legacy left/right text overloads without `Bundle`.
 
 ## FAQ
 
-**Q:** getStatus 返回非 0 还能继续 addText 吗？
+**Q:** Can I keep adding content when getStatus is non-zero?
 
-**A:** 不建议。应先处理缺纸、过热等问题，或在 `close()` 后重新 `initPrint()`。
+**A:** Not recommended. Resolve paper/heat issues first, or `close()` and `initPrint()` again.
 
-**Q:** feedLine(0) 与 feedLine(-1) 区别？
+**Q:** Difference between feedLine(0) and feedLine(-1)?
 
-**A:** `0` 在票尾追加留白；`-1` 不追加底部空白。
+**A:** `0` adds trailing whitespace; `-1` does not.
 
-**Q:** 标签打印为什么要 setLabelFeed？
+**Q:** Why setLabelFeed for labels?
 
-**A:** 标签纸需物理定位；开始前定位/连续模式，结束后必须 `PRN_LABEL_END`，否则下次打印位置会偏。
+**A:** Label stock needs physical positioning — start with LOCATION/CONTINUE, always end with `PRN_LABEL_END`.
 
-**Q:** 自定义字体不生效？
+**Q:** Custom font not applied?
 
-**A:** 检查 `fontName` 路径应用可读，且 TTF 文件有效；若设置了 `fontSize` 会忽略 `font` 档位。
+**A:** Ensure the TTF path is readable; if `fontSize` is set, the `font` tier is ignored.
 
-**Q:** 规范里的 addTextLeft_Right_Center 找不到？
+**Q:** Spec mentions addTextLeft_Right_Center but IDE cannot find it?
 
-**A:** 代码中方法名为 `addTextLeft_Center_Right`，以 SDK 源码为准。
+**A:** The SDK method is `addTextLeft_Center_Right` — follow source code.

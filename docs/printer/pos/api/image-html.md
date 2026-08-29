@@ -1,43 +1,43 @@
-# 图片与 HTML
+# Images and HTML
 
 ## PrinterProviderImpl.addImage
 
-添加位图（字节数组）。
+Adds a bitmap from a byte array.
 
-### 签名
+### Signature
 
 ```java
 void addImage(Bundle format, byte[] imageData)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| format | Bundle | 是 | OFFSET、WIDTH（最大约 380）、HEIGHT |
-| imageData | byte[] | 是 | 图片 PNG/JPEG 等编码字节 |
+| format | Bundle | Yes | OFFSET, WIDTH (max ~380), HEIGHT |
+| imageData | byte[] | Yes | Encoded image bytes (PNG/JPEG, etc.) |
 
 ## PrinterProviderImpl.addImageWithText
 
-图文混排：图片与同行/同块文本。
+Image with accompanying text on the same block.
 
-### 签名
+### Signature
 
 ```java
 void addImageWithText(Bundle format, byte[] imageData)
 ```
 
-format 额外支持：`YAlign`（文本相对图片垂直对齐）、`TEXT`、`FONT`、`FONTBOLD` 等。
+Additional format keys: `YAlign`, `TEXT`, `FONT`, `FONTBOLD`, etc.
 
 ## PrinterProviderImpl.addHtml
 
-渲染 HTML 片段并加入打印队列。
+Renders an HTML fragment into the print queue.
 
-### 签名
+### Signature
 
 ```java
 void addHtml(Bundle format, String content)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| format | Bundle | 是 | OFFSET、WIDTH（max 380）、HEIGHT |
-| content | String | 是 | HTML 字符串 |
+| format | Bundle | Yes | OFFSET, WIDTH (max 380), HEIGHT |
+| content | String | Yes | HTML string |

@@ -1,3 +1,3 @@
-# 打印文件接口
+# APIs for Printing Files
 
-文件打印相关接口说明。
+File printing APIs.

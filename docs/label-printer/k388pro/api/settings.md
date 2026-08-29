@@ -1,24 +1,24 @@
-# 打印设置
+# Print settings
 
-页内设置随本次组包下发；寄存器设置立即写入设备，需已连接。
+Job settings go out with the current page; register settings write immediately and require a connection.
 
-## 本次任务设置（随当前页发送）
+## Job settings (sent with the page)
 
-| 方法 | 范围 | 说明 |
-|------|------|------|
-| `setContrast(int level)` | 0–3 | 对比度，数值越大越深；越界抛 `IllegalArgumentException` |
-| `setSpeed(int level)` | 0–5 | 速度，0 最慢 |
-| `setBold(int level)` | 0 或 >0 | 加粗 |
-| `setPrintWait(int time)` | ≥0 | 延时，单位为 1/8 秒 |
-| `contRast(int level)` | — | 同对比度指令（组包） |
-| `speed(int level)` | — | 同速度指令（组包） |
-| `printWait(int time)` | — | 同延时指令（组包） |
+| Method | Range | Description |
+|--------|-------|-------------|
+| `setContrast(int level)` | 0–3 | Contrast; out of range throws `IllegalArgumentException` |
+| `setSpeed(int level)` | 0–5 | Speed; 0 is slowest |
+| `setBold(int level)` | 0 or >0 | Bold |
+| `setPrintWait(int time)` | ≥0 | Delay in 1/8 second units |
+| `contRast(int level)` | — | Same contrast command (page build) |
+| `speed(int level)` | — | Same speed command (page build) |
+| `printWait(int time)` | — | Same wait command (page build) |
 
-## 打印机持久设置（立即写入，需已连接）
+## Persistent settings (immediate, requires connection)
 
-| 方法 | 说明 |
-|------|------|
-| `setPrintDarkness(int darkness)` | 打印浓度，失败抛 `PrinterException` |
-| `setPrintMode(int mode)` | 0 正常 / 1 高速 / 2 低速 |
-| `setMultiPrintDelay(int delayMs)` | 多份打印间隔，单位毫秒，须 ≥0 |
-| `setRewindPrint(boolean enable)` | 是否启用回卷打印 |
+| Method | Description |
+|--------|-------------|
+| `setPrintDarkness(int darkness)` | Print darkness; throws `PrinterException` on failure |
+| `setPrintMode(int mode)` | 0 normal / 1 high speed / 2 low speed |
+| `setMultiPrintDelay(int delayMs)` | Multi-copy interval in ms, must be ≥0 |
+| `setRewindPrint(boolean enable)` | Enable rewind print |

@@ -1,6 +1,6 @@
-# 绘制
+# Drawing
 
-## 文本
+## Text
 
 ```java
 drawText(int x, int y, String text, int fontSize,
@@ -13,16 +13,16 @@ drawText(int x, int y, String text, String fontType, int fontSize,
          int rotate, int bold, boolean reverse, boolean underline);
 ```
 
-| 参数 | 说明 |
-|------|------|
-| `x` / `y` | 起始位置，单位为点 |
-| `fontSize` | 字号。第一个重载支持 1–12 |
+| Parameter | Description |
+|-----------|-------------|
+| `x` / `y` | Start position in dots |
+| `fontSize` | Font size. First overload supports 1–12. |
 | `rotate` | 0 / 90 / 180 / 270 |
-| `bold` | 0 = 关闭，大于 0 = 开启 |
-| `reverse` | 反白文字 |
-| `underline` | 下划线 |
+| `bold` | 0 = off, greater than 0 = on |
+| `reverse` | Inverse text |
+| `underline` | Underline |
 
-## 图形
+## Shapes
 
 ```java
 drawBox(int lineWidth, int topLeftX, int topLeftY, int bottomRightX, int bottomRightY);
@@ -30,19 +30,19 @@ drawLine(int lineWidth, int startX, int startY, int endX, int endY, boolean full
 drawINVERSE(int x0, int y0, int x1, int y1, int width);
 ```
 
-`fullLine` 仅为兼容保留，不影响输出。
+`fullLine` is kept for compatibility and does not affect output.
 
-## 条码 / 二维码
+## Barcode / QR code
 
 ```java
 drawBarCode(int x, int y, String text, int type, int rotate, int lineWidth, int height);
 drawQrCode(int x, int y, String text, int rotate, int ver, int lel);
 ```
 
-一维码 `type`：
+1D barcode `type`:
 
-| type | 码制 |
-|------|------|
+| type | Symbology |
+|------|-----------|
 | 0 | CODE39 |
 | 1 | CODE128 |
 | 2 | CODE93 |
@@ -53,20 +53,20 @@ drawQrCode(int x, int y, String text, int rotate, int ver, int lel);
 | 7 | UPCE |
 | 8 | I2OF5 |
 
-- 一维码 `rotate`：`0` 横向，`1` 纵向
-- 二维码 `ver`：放大倍数 1–32，常用 6
-- 二维码 `lel`：版本 1–40，`0` = 自动
+- 1D `rotate`: `0` horizontal, `1` vertical
+- QR `ver`: magnification 1–32, typically 6
+- QR `lel`: version 1–40, `0` = auto
 
-## 图片
+## Images
 
 ```java
 drawGraphic(int x, int y, Bitmap bitmap);
 drawImageFormFile(int x, int y, String filePath);
 ```
 
-图片会转换为黑白点阵。图片页请用 `printByte` 组数据，再用 `printByGzipData` 发送。
+Images are converted to black-and-white dots. For image pages, build data with `printByte` and send with `printByGzipData`.
 
-## 走纸与对齐
+## Feed and alignment
 
 ```java
 prefeed(int len);    // Feed before print. 8 dots = 1 mm

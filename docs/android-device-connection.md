@@ -1,7 +1,7 @@
-# 安卓设备间通信连接开发
+# Android Device Connection Development
 
-安卓设备间通信与连接相关开发指南。
+Android device-to-device connection development guide.
 
-## 概述
+## Overview
 
-本章对应 **安卓设备间通信连接开发**。
+This page mirrors **Android Device Connection Development**.

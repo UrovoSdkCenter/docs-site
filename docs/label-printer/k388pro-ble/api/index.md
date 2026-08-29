@@ -1,17 +1,15 @@
-# API 参考
+# API Reference
 
-如无特别说明，以下接口均位于 `BlePrinterManager`。
+Unless noted otherwise, all APIs are on `BlePrinterManager`.
 
-按功能查看：
+| Topic | Description |
+|-------|-------------|
+| [Initialization](/label-printer/k388pro-ble/api/init) | Singleton, version, release |
+| [Connection](/label-printer/k388pro-ble/api/connection) | Connect, disconnect, callbacks, packet interval |
+| [Send print data](/label-printer/k388pro-ble/api/print) | `printByData` / Gzip / text |
+| [Status and firmware](/label-printer/k388pro-ble/api/status) | Status query, firmware upgrade |
+| [Page setup](/label-printer/k388pro-ble/api/page) | Size, rotation, gap, build data |
+| [Drawing](/label-printer/k388pro-ble/api/drawing) | Text, shapes, barcodes, images |
+| [Print settings](/label-printer/k388pro-ble/api/settings) | Contrast, speed, darkness, and more |
 
-| 分类 | 说明 |
-|------|------|
-| [初始化](/label-printer/k388pro-ble/api/init) | 单例、版本、释放资源 |
-| [连接](/label-printer/k388pro-ble/api/connection) | 连接、断开、回调、发包间隔 |
-| [发送打印数据](/label-printer/k388pro-ble/api/print) | `printByData` / Gzip / 文本 |
-| [状态与固件](/label-printer/k388pro-ble/api/status) | 状态查询、固件升级 |
-| [页面设置](/label-printer/k388pro-ble/api/page) | 页宽高、旋转、间隙、组数据 |
-| [绘制](/label-printer/k388pro-ble/api/drawing) | 文本、图形、条码、图片 |
-| [打印设置](/label-printer/k388pro-ble/api/settings) | 对比度、速度、浓度等 |
-
-异常类：`com.urovo.printer.exception.PrinterException`
+Exception class: `com.urovo.printer.exception.PrinterException`

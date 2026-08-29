@@ -1,7 +1,7 @@
-# 电子价签开发
+# Electronic Price Tag Development
 
-电子价签相关开发指南。
+Electronic price tag development guide.
 
-## 概述
+## Overview
 
-本章对应 **电子价签开发**。
+This page mirrors **Electronic Price Tag Development**.

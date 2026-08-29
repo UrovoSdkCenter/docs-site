@@ -1,15 +1,15 @@
-# 下载和 Demo
+# Download & Demo
 
-本页提供 Scanner SDK 开发文档包与离线 API 文档。文件在仓库目录 `downloads/scanning/`。
+Scanner SDK development docs package and offline API documentation. Files are under `downloads/scanning/`.
 
-## 下载列表
+## Downloads
 
-| 文件 | 说明 | 下载 |
-|------|------|------|
-| `Scanner_SDK_Development_Docs-20260828.zip` | Scanner SDK 开发文档包（20260828） | [下载文档包](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/scanning/Scanner_SDK_Development_Docs-20260828.zip) |
-| `scanner-sdk-docs.html` | 离线 API 文档（双击用浏览器打开） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/scanning/scanner-sdk-docs.html) |
+| File | Description | Download |
+|------|-------------|----------|
+| `Scanner_SDK_Development_Docs-20260828.zip` | Scanner SDK Development Docs package (20260828) | [Download package](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/scanning/Scanner_SDK_Development_Docs-20260828.zip) |
+| `scanner-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/scanning/scanner-sdk-docs.zip) |
 
-## 使用说明
+## Usage
 
-1. 解压文档包，或直接下载 HTML 本地双击浏览。
-2. 在线 API 参考见 [API 参考](/scanning/)。
+1. Download the zip package, extract it, then open the HTML locally in a browser.
+2. Online API reference: [API Reference](/scanning/).

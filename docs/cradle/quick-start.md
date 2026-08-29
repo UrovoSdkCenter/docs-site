@@ -1,10 +1,6 @@
-# 快速开始
+# Quick Start
 
 ```java
-import com.urovo.docklib.DockTool;
-import com.urovo.docklib.DockException;
-import com.urovo.docklib.IDockTool;
-
 IDockTool dock = DockTool.getInstance();
 
 @Override protected void onStart() {
@@ -17,7 +13,7 @@ IDockTool dock = DockTool.getInstance();
     super.onStop();
 }
 
-// 链路 ONLINE 时在后台线程：
+// On a background thread when ONLINE:
 try {
     int wall = dock.getWallId();
     String fw = dock.getFirmwareVersion();
@@ -26,6 +22,6 @@ try {
 }
 ```
 
-成功标志：`getLinkState() == LinkState.ONLINE`，且同步读取不抛 `DockException`。
+Success: `getLinkState() == LinkState.ONLINE` and sync reads do not throw `DockException`.
 
-下一步：[API 参考](/cradle/api/)
+Next: [API Reference](/cradle/api/)

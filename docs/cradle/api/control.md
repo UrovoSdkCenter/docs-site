@@ -1,23 +1,19 @@
-# 底座控制
+# Cradle control
 
 ## unlockCradle
 
-异步解锁底座，回调在主线程。
+Async unlock; callbacks on the main thread.
 
 ```java
 void unlockCradle(UnlockCallback callback)
 ```
 
-| 参数 | 说明 |
-|------|------|
-| `callback` | `onAck` / `onSuccess` / `onFailure` 在主线程 |
+## Other APIs
 
-## 其他接口
-
-| 方法 | 说明 |
-|------|------|
-| `setUnlockTimeSeconds(int seconds)` | 解锁时长 **1..30** |
-| `getUnlockTimeSeconds()` | 读取解锁时长 |
-| `setLedEnabled(boolean enable)` | LED 开关 |
-| `getLedEnabled()` | 读取 LED 状态 |
-| `rebootCradle()` | 重启底座（cmd 0xB8）；**不会**单独执行 OTA |
+| Method | Description |
+|--------|-------------|
+| `setUnlockTimeSeconds(int seconds)` | Unlock duration **1..30** |
+| `getUnlockTimeSeconds()` | Read unlock duration |
+| `setLedEnabled(boolean enable)` | LED on/off |
+| `getLedEnabled()` | Read LED state |
+| `rebootCradle()` | Reboot cradle (cmd 0xB8); does **not** run OTA alone |

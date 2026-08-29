@@ -1,11 +1,9 @@
-# 打印热敏小票接口
+# APIs for Thermal Receipts
 
-热敏小票打印相关接口说明。
-
-## 示例
+Thermal receipt printing APIs.
 
 ```kotlin
-printer.printText("订单号：10001")
+printer.printText("Order: 10001")
 printer.feedLine(2)
 printer.cutPaper()
 ```

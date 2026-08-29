@@ -1,21 +1,21 @@
-# 生命周期与链路
+# Lifecycle and link
 
-| 方法 | 说明 |
-|------|------|
-| `open()` | 启动串口 worker 并连接 UART |
-| `close()` | 停止 worker 并释放端口 |
-| `isOpen()` | 当且仅当 `getLinkState() == ONLINE` 时为 `true` |
-| `getLinkState()` | 当前链路状态 |
-| `setAutoReconnect(boolean enable)` | 默认 `true` |
-| `addLinkListener(DockLinkListener listener)` | 主线程状态回调 |
-| `removeLinkListener(DockLinkListener listener)` | 取消注册 |
-| `setSerialTraceEnabled(boolean enable)` | 经 `MLog` 输出十六进制 TX/RX |
+| Method | Description |
+|--------|-------------|
+| `open()` | Start serial worker and connect UART |
+| `close()` | Stop worker and release port |
+| `isOpen()` | `true` only when `getLinkState() == ONLINE` |
+| `getLinkState()` | Current link state |
+| `setAutoReconnect(boolean enable)` | Default `true` |
+| `addLinkListener(DockLinkListener listener)` | Main-thread state callback |
+| `removeLinkListener(DockLinkListener listener)` | Unregister |
+| `setSerialTraceEnabled(boolean enable)` | Hex TX/RX via `MLog` |
 
 ## LinkState
 
 | Value | Meaning |
 |-------|---------|
-| `CLOSED` | 端口已关闭 |
-| `OPENING` | 连接中 / 重连中 |
-| `ONLINE` | 可收发事务 |
-| `LOST` | 链路断开；若启用则自动重连 |
+| `CLOSED` | Port closed |
+| `OPENING` | Connecting / reconnecting |
+| `ONLINE` | Ready for transactions |
+| `LOST` | Link lost; auto-reconnect if enabled |

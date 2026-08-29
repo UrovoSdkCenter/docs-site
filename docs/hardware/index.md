@@ -1,5 +1,3 @@
-# 硬件产品
+# Hardware Products
 
-硬件产品文档入口（对应顶部菜单「硬件产品」）。
-
-后续可按产品型号继续拆分子目录。
+Hardware products entry (top nav: Hardware Products).

@@ -1,7 +1,7 @@
-# AI人工智能SDK
+# Artificial Intelligence(AI) SDK
 
-人工智能相关 SDK 的接入与接口说明。
+AI SDK integration guide.
 
-## 概述
+## Overview
 
-本章对应 **AI人工智能SDK**，可在此补充能力列表、模型依赖与调用示例。
+This page mirrors the **Artificial Intelligence(AI) SDK** section.

@@ -1,9 +1,9 @@
-# 发送打印数据
+# Send print data
 
-| 方法 | 说明 |
-|------|------|
-| `printByData(byte[] data)` | 发送原始打印数据。 |
-| `printByGzipData(byte[] data)` | 先压缩再发送。图片打印建议使用此接口。 |
-| `printByText(String text)` | 将文本按 GBK 编码后发送 CPCL 或原始文本。 |
+| Method | Description |
+|--------|-------------|
+| `printByData(byte[] data)` | Sends raw print bytes. |
+| `printByGzipData(byte[] data)` | Compresses, then sends. Recommended for image jobs. |
+| `printByText(String text)` | Encodes text as GBK and sends CPCL or raw text. |
 
-成功返回 `true`。未连接、`data` 为 null，或正在升级固件时返回 `false`。
+Returns `true` on success. Returns `false` if disconnected, `data` is null, or a firmware upgrade is running.

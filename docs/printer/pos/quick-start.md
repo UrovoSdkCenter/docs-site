@@ -1,6 +1,6 @@
-# 快速开始
+# Quick Start
 
-下列示例打印一行居中文本并走纸 3 行：
+Print a centered bold line and feed three lines:
 
 ```java
 import android.os.Bundle;
@@ -12,7 +12,7 @@ printer.initPrint();
 
 if (printer.getStatus() != 0) {
    printer.close();
-   return; // 打印机不可用，见 PrintStatus
+   return; // printer not ready — see PrintStatus
 }
 
 Bundle format = new Bundle();
@@ -22,8 +22,8 @@ format.putBoolean(PrintFormat.FONTBOLD, true);
 printer.addText(format, "APPROVED");
 
 printer.feedLine(3);
-int status = printer.startPrint(); // 0 表示成功
+int status = printer.startPrint(); // 0 = success
 printer.close();
 ```
 
-**成功标志：** `startPrint()` 与 `getStatus()` 返回 `0x00`（`PrintStatus.ERROR_NONE`）。
+**Success indicator:** `startPrint()` and `getStatus()` return `0x00` (`PrintStatus.ERROR_NONE`).

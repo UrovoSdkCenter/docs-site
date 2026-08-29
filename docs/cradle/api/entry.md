@@ -1,13 +1,11 @@
-# 入口
+# Entry
 
 ## DockTool.getInstance
 
-返回进程内单例 `IDockTool`。
+Returns the process-wide `IDockTool` singleton.
 
 ```java
 static IDockTool getInstance()
 ```
 
-| 类型 | 说明 |
-|------|------|
-| `IDockTool` | 共享实例；请勿直接构造 `DockTool` |
+Do not construct `DockTool` directly.

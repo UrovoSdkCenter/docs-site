@@ -1,14 +1,14 @@
-# Urovo 打印服务介绍
+# Urovo Printer Service Introduction
 
-内置打印机服务能力说明。
+Built-in printer service overview.
 
-## 功能概述
+## Features
 
-- 文本 / 条码 / 图片打印
-- 切纸与走纸
-- 状态查询
+- Text / barcode / image printing
+- Paper feed and cut
+- Status query
 
-## 相关文档
+## Related
 
-- [SDK升级说明](/printer/upgrade)
-- [SDK概览](/printer/sdk/overview)
+- [SDK Upgrade Notes](/printer/upgrade)
+- [SDK Overview](/printer/sdk/overview)

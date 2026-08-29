@@ -1,7 +1,7 @@
-# 收款音箱开发
+# Payment Sound Box Development
 
-收款音箱相关开发指南。
+Payment sound box development guide.
 
-## 概述
+## Overview
 
-本章对应 **收款音箱开发**。
+This page mirrors **Payment Sound Box Development**.

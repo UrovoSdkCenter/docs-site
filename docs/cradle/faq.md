@@ -1,21 +1,21 @@
-# 注意事项与 FAQ
+# Notes & FAQ
 
-## 注意事项
+## Notes
 
-1. **串口独占** — SDK 使用单 worker 线程与单 UART。同一时刻仅一项操作。OTA 期间勿并行调用其他 `IDockTool` 方法。
-2. **OTA 与帧协议** — OTA 会暂时离开帧模式；SDK 内部处理进入/退出。
-3. **`.bin` 大小** — 有效范围 **1..0xD000** 字节。调用前在应用内校验。
-4. **闪存过程中不可取消** — `upgradeFirmware` 开始后无官方取消路径。
-5. **勿用 SerialPortLibrary 做 IAP** — 仅使用 `IDockTool.upgradeFirmware`。
-6. **读字符串可能为空** — 版本 / 型号 / 序列号在等待窗口内可能返回 `""`。
+1. **Exclusive serial** — One worker thread and one UART. Only one operation at a time; do not call other `IDockTool` methods during OTA.
+2. **OTA vs framed protocol** — OTA leaves frame mode temporarily; the SDK handles enter/exit.
+3. **`.bin` size** — Valid range **1..0xD000** bytes. Validate in the app before calling.
+4. **No cancel mid-flash** — Once `upgradeFirmware` starts there is no official cancel path.
+5. **Do not use SerialPortLibrary for IAP** — Use `IDockTool.upgradeFirmware` only.
+6. **Empty strings** — Version / model / serial may return `""` within the wait window.
 
 ## FAQ
 
-**问：可以在主线程调用阻塞 API 吗？**  
-答：若 UI 需保持响应则不建议；请使用后台 `Executor`。OTA 最长可能阻塞约 180 秒。
+**Q: Can I call blocking APIs on the main thread?**  
+A: Not if the UI must stay responsive; use a background `Executor`. OTA may block up to about 180 seconds.
 
-**问：固件升级中途能否取消？**  
-答：`upgradeFirmware` 开始后无官方取消路径。
+**Q: Can firmware upgrade be cancelled?**  
+A: No official cancel path after `upgradeFirmware` starts.
 
-**问：为何 `getFirmwareVersion()` 返回空字符串？**  
-答：底座可能在 SDK 等待窗口内未发送文本；请在 UI 中处理空串。
+**Q: Why does `getFirmwareVersion()` return an empty string?**  
+A: The cradle may not send text within the SDK wait window; handle empty strings in the UI.

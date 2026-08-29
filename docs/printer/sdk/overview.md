@@ -1,9 +1,3 @@
-# SDK概览
+# SDK Overview
 
-打印 SDK 模块与能力总览。
-
-## 模块说明
-
-- 初始化与连接
-- 小票 / 标签 / 文件打印
-- 状态与异常处理
+Printer SDK modules and capabilities.

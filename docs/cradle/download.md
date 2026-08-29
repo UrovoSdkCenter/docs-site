@@ -1,16 +1,16 @@
-# 下载和 Demo
+# Download & Demo
 
-本页提供 Cradle（DockLib）的 SDK 包与离线 API 文档。文件在仓库目录 `downloads/cradle/`。
+SDK package and offline API documentation for Cradle (DockLib). Files are under `downloads/cradle/`.
 
-## 下载列表
+## Downloads
 
-| 文件 | 说明 | 下载 |
-|------|------|------|
-| `CradleLib_SP35.zip` | Cradle SDK 包（含 AAR / 文档等） | [下载 SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/cradle/CradleLib_SP35.zip) |
-| `docklib-sdk-docs.html` | 离线 API 文档（双击用浏览器打开） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/cradle/docklib-sdk-docs.html) |
+| File | Description | Download |
+|------|-------------|----------|
+| `CradleLib_SP35.zip` | Cradle SDK package (AAR / docs, etc.) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/cradle/CradleLib_SP35.zip) |
+| `docklib-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/cradle/docklib-sdk-docs.zip) |
 
-## 使用说明
+## Usage
 
-1. 解压 SDK zip，按包内说明将 AAR / 模块接入工程。
-2. 离线 API 文档为单页 HTML，本地双击即可浏览。
-3. 在线 API 参考见 [API 参考](/cradle/)。
+1. Unzip the SDK package and integrate the AAR / module as described inside.
+2. Download the zip, extract it, then open the HTML locally in a browser.
+3. Online API reference: [API Reference](/cradle/).

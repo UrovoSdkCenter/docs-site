@@ -1,72 +1,72 @@
-# 标签打印
+# Label printing
 
 ## PrinterProviderImpl.setPrinterMode
 
-切换普通小票 / 标签模式。
+Switches normal receipt vs label mode.
 
-### 签名
+### Signature
 
 ```java
 boolean setPrinterMode(boolean labelMode)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| labelMode | boolean | 是 | true 标签模式；false 普通模式 |
+| labelMode | boolean | Yes | true label mode; false normal mode |
 
-### 返回值
+### Returns
 
-`true` 设置成功；`false` 失败。
+`true` if setting succeeded; `false` otherwise.
 
 ## PrinterProviderImpl.setLabelFeed
 
-标签纸定位与连续打印控制。每次标签打印前需 `PRN_LABEL_LOCATION` 或 `PRN_LABEL_CONTINUE`，结束后需 `PRN_LABEL_END`。
+Label positioning and continuous print control. Before each label job use `PRN_LABEL_LOCATION` or `PRN_LABEL_CONTINUE`; after printing use `PRN_LABEL_END`.
 
-### 签名
+### Signature
 
 ```java
 int setLabelFeed(byte state)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| state | byte | 是 | 见 PrinterLabelState |
+| state | byte | Yes | See PrinterLabelState |
 
-### 返回值
+### Returns
 
-`0` 成功；其他失败。
+`0` success; otherwise failure.
 
 | Method | Description |
 | --- | --- |
-| boolean supportLabelPrint() | 当前设备是否支持标签打印 |
+| boolean supportLabelPrint() | Whether the device supports label printing |
 
 ## PrintFormat
 
-| 常量 | 值 | 说明 |
+| Constant | Value | Meaning |
 | --- | --- | --- |
-| FONT_SMALL / FONT_NORMAL / FONT_LARGE | 0 / 1 / 2 | 字号档位 |
-| ALIGN_LEFT / ALIGN_CENTER / ALIGN_RIGHT | 0 / 1 / 2 | 对齐 |
-| Y_ALIGN_TOP / Y_ALIGN_CENTER / Y_ALIGN_BOTTOM | 0 / 1 / 2 | 图文混排文本垂直对齐 |
+| FONT_SMALL / FONT_NORMAL / FONT_LARGE | 0 / 1 / 2 | Font tier |
+| ALIGN_LEFT / ALIGN_CENTER / ALIGN_RIGHT | 0 / 1 / 2 | Alignment |
+| Y_ALIGN_TOP / Y_ALIGN_CENTER / Y_ALIGN_BOTTOM | 0 / 1 / 2 | Vertical text align in image+text |
 
-`````````````````` Bundle 键：`FONT`、`ALIGN`、`FONTBOLD`、`FONTNAME`、`FONTSIZE`、`LINEHEIGHT`、`WIDTH`、`HEIGHT`、`OFFSET`、`BARCODE_TYPE` 等。
+`````````````````` Bundle keys include `FONT`, `ALIGN`, `FONTBOLD`, `FONTNAME`, `FONTSIZE`, `LINEHEIGHT`, `WIDTH`, `HEIGHT`, `OFFSET`, `BARCODE_TYPE`, etc.
 
 ## PrintStatus
 
-| 常量 | 值 | 说明 |
+| Constant | Value | Meaning |
 | --- | --- | --- |
-| ERROR_NONE | 0x00 | 正常 |
-| ERROR_PAPERENDED | 0xF0 | 缺纸 |
-| ERROR_OVERHEAT | 0xF3 | 过热 |
-| ERROR_LOWVOL | 0xE1 | 低压 |
-| ERROR_BUSY | 0xF7 | 忙 |
-| ERROR_MOTORERR | 0xFB | 机芯故障 |
-| ERROR_HARDERR | 0xF2 | 硬件错误 |
+| ERROR_NONE | 0x00 | OK |
+| ERROR_PAPERENDED | 0xF0 | Out of paper |
+| ERROR_OVERHEAT | 0xF3 | Overheat |
+| ERROR_LOWVOL | 0xE1 | Low voltage |
+| ERROR_BUSY | 0xF7 | Busy |
+| ERROR_MOTORERR | 0xFB | Motor error |
+| ERROR_HARDERR | 0xF2 | Hardware error |
 
 ## PrinterLabelState
 
-| 常量 | 值 | 说明 |
+| Constant | Value | Meaning |
 | --- | --- | --- |
-| PRN_LABEL_STUDY | 0x00 | 学习标签高度（不可用） |
-| PRN_LABEL_LOCATION | 0x01 | 标签定位（单次/多次均可） |
-| PRN_LABEL_CONTINUE | 0x02 | 连续标签打印 |
-| PRN_LABEL_END | 0x03 | 标签打印结束设置 |
+| PRN_LABEL_STUDY | 0x00 | Learn label height (not available) |
+| PRN_LABEL_LOCATION | 0x01 | Label positioning (single or batch) |
+| PRN_LABEL_CONTINUE | 0x02 | Continuous label printing |
+| PRN_LABEL_END | 0x03 | End-of-label settings |

@@ -1,7 +1,7 @@
-# 读卡开发
+# Card Reader Development
 
-读卡器相关开发指南。
+Card reader development guide.
 
-## 概述
+## Overview
 
-本章对应 **读卡开发**。
+This page mirrors **Card Reader Development**.

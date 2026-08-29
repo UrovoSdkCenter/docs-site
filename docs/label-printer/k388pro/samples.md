@@ -1,6 +1,6 @@
-# 示例
+# Samples
 
-## 文本与条码标签
+## Text and barcode label
 
 ```java
 UPrinterManager printer = UPrinterManager.getInstance(context);
@@ -15,9 +15,9 @@ printer.printByData(data);
 printer.disconnect();
 ```
 
-标签纸常用 `skip=1`（缝隙检测）。
+Label stock commonly uses `skip=1` (gap detect).
 
-## 图片打印
+## Image print
 
 ```java
 printer.connect();
@@ -29,9 +29,9 @@ printer.printByData(gzip);
 printer.disconnect();
 ```
 
-图片页必须用 `printByte`；大数据可先 GZIP。
+Image pages must use `printByte`; large payloads can be GZIP-compressed first.
 
-## RFID 写入
+## RFID write
 
 ```java
 boolean ok = printer.rfidWrite(1, 0x00000000, 4, epc, epc.length);
@@ -40,4 +40,4 @@ byte[] buf = new byte[epc.length];
 printer.rfidRead(1, 0x00000000, 4, buf, buf.length);
 ```
 
-从 offset=4 写 EPC 区时不会自动更新 PC 长度字段；长度变化需自行更新 PC。
+Writing the EPC bank from offset 4 does not auto-update the PC length field; update PC yourself when length changes.

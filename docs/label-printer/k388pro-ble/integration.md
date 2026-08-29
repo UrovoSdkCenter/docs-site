@@ -1,10 +1,10 @@
-# 接入
+# Integration
 
-从 [下载页](/label-printer/download) 获取 SDK 后，按下面步骤接入工程。
+Download the SDK from the [download page](/label-printer/download), then follow the steps below.
 
-## 获取 SDK
+## Obtain the SDK
 
-推荐 fat jar（含组包类）：
+Recommended fat JAR (includes page-builder classes):
 
 ```gradle
 dependencies {
@@ -12,11 +12,11 @@ dependencies {
 }
 ```
 
-如果使用拆分 JAR，需要同时引入 BLE 库和指令构建库。
+If you use split JARs, include both the BLE library and the command-builder library.
 
-## 工程配置
+## Project setup
 
-在应用 `AndroidManifest.xml` 声明并动态申请：
+Declare in `AndroidManifest.xml` and request at runtime:
 
 ```xml
 <uses-permission android:name="android.permission.BLUETOOTH"
@@ -28,30 +28,30 @@ dependencies {
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-运行时权限：
+Runtime permissions:
 
-| 系统 | 运行时权限 |
-|------|------------|
-| Android 12+ | `BLUETOOTH_CONNECT`、`BLUETOOTH_SCAN` |
-| Android 11 及以下 | 扫描时需定位权限 |
+| Android version | Required permissions |
+|-----------------|----------------------|
+| Android 12+ | `BLUETOOTH_CONNECT`, `BLUETOOTH_SCAN` |
+| Android 11 and earlier | Location permission (for device scan) |
 
-## BLE 特征
+## BLE characteristics
 
-以下 UUID 已内置在 SDK 中，应用无需自行配置：
+These UUIDs are built into the SDK. Applications do not need to configure them:
 
-| 方向 | UUID |
-|------|------|
-| 打印机 → App（Notify） | `0000fff1-0000-1000-8000-00805f9b34fb` |
-| App → 打印机（Write） | `0000fff2-0000-1000-8000-00805f9b34fb` |
+| Direction | UUID |
+|-----------|------|
+| Printer → App (Notify) | `0000fff1-0000-1000-8000-00805f9b34fb` |
+| App → Printer (Write) | `0000fff2-0000-1000-8000-00805f9b34fb` |
 
-无 API Key。混淆请 keep：`com.urovo.printer.ble.**` 与 `com.urovo.printer.**`。
+No API key. ProGuard keep: `com.urovo.printer.ble.**` and `com.urovo.printer.**`.
 
-## 初始化
+## Initialization
 
 ```java
 BlePrinterManager printer = BlePrinterManager.getInstance(context);
 ```
 
-首次必须传入 `Context`（建议 `Application` Context）。无鉴权配置项。
+Pass a `Context` on first use (prefer Application Context). There is no auth configuration.
 
-下一步：[快速开始](/label-printer/k388pro-ble/quick-start)
+Next: [Quick Start](/label-printer/k388pro-ble/quick-start)

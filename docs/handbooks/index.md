@@ -1,3 +1,3 @@
-# 手册&公告
+# Handbooks & Bulletins
 
-手册与公告入口（对应顶部菜单「手册&公告」）。
+Handbooks and bulletins entry (top nav: Handbooks & Bulletins).

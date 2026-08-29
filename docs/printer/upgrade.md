@@ -1,9 +1,9 @@
-# SDK升级说明
+# SDK Upgrade Notes
 
-打印 SDK 版本升级注意事项。
+Notes when upgrading the printer SDK.
 
-## 升级步骤
+## Steps
 
-1. 替换依赖版本
-2. 核对接口变更
-3. 回归核心打印场景
+1. Update the dependency version
+2. Review API changes
+3. Regression-test core print flows

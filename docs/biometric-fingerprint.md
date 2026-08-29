@@ -1,7 +1,7 @@
-# 生物识别（指纹）开发指南
+# Biometric (Fingerprint) Development Guide
 
-生物识别（指纹）完整开发指南。
+Biometric fingerprint development guide.
 
-## 概述
+## Overview
 
-本章对应 **生物识别（指纹）开发指南**。另见 [指纹开发](/fingerprint)。
+This page mirrors **Biometric (Fingerprint) Development Guide**. See also [Fingerprints Development](/fingerprint).

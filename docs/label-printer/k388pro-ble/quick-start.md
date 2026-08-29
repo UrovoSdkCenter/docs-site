@@ -1,6 +1,6 @@
-# 快速开始
+# Quick Start
 
-接入完成后，可用下面代码完成一次连接、组页并打印。
+After integration, this sample connects, builds a page, and prints.
 
 ```java
 BlePrinterManager printer = BlePrinterManager.getInstance(context);
@@ -21,4 +21,4 @@ try {
 }
 ```
 
-更多场景见 [示例](/label-printer/k388pro-ble/samples)，接口说明见 [API 参考](/label-printer/k388pro-ble/api/)。
+More samples: [Samples](/label-printer/k388pro-ble/samples). APIs: [API Reference](/label-printer/k388pro-ble/api/).

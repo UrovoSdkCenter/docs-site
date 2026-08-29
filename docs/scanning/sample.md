@@ -1,6 +1,6 @@
-# 接入示例
+# Integration Sample
 
-扫码 SDK 调用示例。
+Scanning SDK sample.
 
 ```kotlin
 Scanner.start { result ->

@@ -1,28 +1,28 @@
-# 入口与生命周期
+# Entry and lifecycle
 
 ## PrinterProviderImpl.getInstance
 
-获取打印管理单例。
+Returns the printer manager singleton.
 
-### 签名
+### Signature
 
 ```java
 static PrinterProviderImpl getInstance(Context context)
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文 |
+| context | Context | Yes | Application context |
 
-### 返回值
+### Returns
 
-`PrinterProviderImpl` 单例实例。
+`PrinterProviderImpl` singleton.
 
-### 异常 / 错误码
+### Errors
 
-无
+None.
 
-### 示例
+### Example
 
 ```java
 PrinterProviderImpl printer = PrinterProviderImpl.getInstance(getApplicationContext());
@@ -30,27 +30,23 @@ PrinterProviderImpl printer = PrinterProviderImpl.getInstance(getApplicationCont
 
 ## PrinterProviderImpl.initPrint
 
-打开打印机并初始化打印页（宽 384 像素）。
+Opens the printer and initializes the page (384 px wide).
 
-### 签名
+### Signature
 
 ```java
 int initPrint()
 ```
 
-| 参数 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| — | — | — | 无 |
+### Returns
 
-### 返回值
+Return value of underlying `PrinterManager.open()`; `0` means success.
 
-底层 `PrinterManager.open()` 返回值；`0` 表示打开成功。
+### Errors
 
-### 异常 / 错误码
+Non-zero open failure — do not compose content.
 
-非 0 表示打开失败，不应继续组单。
-
-### 示例
+### Example
 
 ```java
 int ret = printer.initPrint();
@@ -58,37 +54,37 @@ int ret = printer.initPrint();
 
 ## PrinterProviderImpl.close
 
-关闭打印机并释放页面资源。建议每次 `startPrint()` 完成后调用。
+Closes the printer and releases page resources. Recommended after each `startPrint()`.
 
-### 签名
+### Signature
 
 ```java
 int close()
 ```
 
-### 返回值
+### Returns
 
-固定返回 `0`。
+Always `0`.
 
 ## PrinterProviderImpl.startPrint
 
-提交缓冲区并开始物理打印。
+Flushes the buffer and starts physical printing.
 
-### 签名
+### Signature
 
 ```java
 int startPrint()
 ```
 
-### 返回值
+### Returns
 
-打印结果状态码，含义与 `getStatus()` 一致，参见 `PrintStatus` 及本文「错误码」分组。
+Print status — same semantics as `getStatus()`; see `PrintStatus` and the error-code section below.
 
-### 示例
+### Example
 
 ```java
 int status = printer.startPrint();
 if (status != PrintStatus.ERROR_NONE) {
-   // 处理缺纸、过热等
+   // handle out-of-paper, overheat, etc.
 }
 ```

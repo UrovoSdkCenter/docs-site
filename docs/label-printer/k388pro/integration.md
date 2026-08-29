@@ -1,44 +1,44 @@
-# 接入
+# Integration
 
-从 [下载页](/label-printer/k388pro/download) 获取离线文档后，按下面步骤接入工程。
+Get the offline docs from the [download page](/label-printer/k388pro/download), then follow the steps below.
 
-## 获取 SDK
+## Obtain the SDK
 
-将 `print` 模块编译产物（AAR 或 jar）引入应用。常用方式：
+Add the `print` module build output (AAR or JAR):
 
 ```gradle
 implementation project(':print')
 ```
 
-或拷贝 jar，例如：
+Or copy a JAR, for example:
 
 ```gradle
 implementation files('libs/UK388PrintLibrary_v2.3.1.jar')
 ```
 
-生成 jar（模块内已注册 `makeJar`）：
+Build the JAR (`makeJar` is registered in the module):
 
 ```bash
 ./gradlew :print:compileDebugJavaWithJavac :print:makeJar
 ```
 
-输出目录：`print/build/libs/`。
+Output: `print/build/libs/`.
 
-## 工程配置
+## Project setup
 
-- `print` 模块 `AndroidManifest.xml` 未声明额外权限；应用按业务需要自行申请存储（固件文件）等权限。
-- 混淆时需 keep `com.urovo.printer.**`。
-- 无 API Key / 鉴权配置。
+- The `print` module does not declare extra permissions; request storage (firmware files) as needed.
+- ProGuard keep: `com.urovo.printer.**`.
+- No API key / auth configuration.
 
-## 初始化
+## Initialization
 
 ```java
 UPrinterManager printer = UPrinterManager.getInstance(context);
-// 或
+// or
 UPrinterManager.initialize(context);
 UPrinterManager printer = UPrinterManager.getInstance();
 ```
 
-首次必须使用带 `Context` 的入口。之后可 `getInstance()`。
+Pass a `Context` on first use. After that, `getInstance()` is enough.
 
-下一步：[快速开始](/label-printer/k388pro/quick-start)
+Next: [Quick Start](/label-printer/k388pro/quick-start)
