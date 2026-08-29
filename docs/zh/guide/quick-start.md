@@ -11,12 +11,11 @@
 | 开发环境 | Android Studio（推荐最新稳定版） |
 | 目标设备 | 对应机型的 Urovo 设备，并已开启开发者选项 |
 | 调试方式 | USB 调试，或同一局域网下的无线调试 |
-| SDK 包 | 从对应产品的 [下载和 Demo](/zh/urovo-customer-api/download) 页获取 |
+| SDK 包 | 从对应产品的「下载和 Demo」页获取 |
 
 ::: tip 选择正确的 SDK
 本站按能力拆分文档。接入前先确认业务场景，再下载对应包：
 
-- 设备系统能力 → [Urovo 设备 API](/zh/urovo-customer-api/)
 - 内置热敏打印 → [Print 开发](/zh/printer/pos/)
 - SP35 开发 → [Cradle 开发](/zh/cradle/)
 - 扫码 → [扫码开发](/zh/scanning/)
@@ -85,7 +84,6 @@ dependencies {
 ## 后续步骤
 
 - [开发指南与基础](/zh/guide/basics)：权限、日志、调试与常见问题
-- [Urovo 设备 API](/zh/urovo-customer-api/)：设备管理与系统能力
 - [Print 开发](/zh/printer/pos/)：POS 热敏打印
 - [扫码开发](/zh/scanning/)：扫码接入
 - [RFID 开发](/zh/rfid/)：RFID 盘点与读写

@@ -11,12 +11,11 @@ Make sure you have the following:
 | IDE | Android Studio (latest stable recommended) |
 | Device | A matching Urovo device with developer options enabled |
 | Debugging | USB debugging, or wireless debugging on the same LAN |
-| SDK package | Download from the product’s [Download & Demo](/urovo-customer-api/download) page |
+| SDK package | Download from the product’s Download & Demo page |
 
 ::: tip Choose the right SDK
 Docs on this site are organized by capability. Pick the package that matches your scenario:
 
-- Device / system APIs → [Urovo Device API](/urovo-customer-api/)
 - Built-in thermal printing → [Print development](/printer/pos/)
 - SP35 development → [Cradle Development](/cradle/)
 - Scanning → [Scanning development](/scanning/)
@@ -85,7 +84,6 @@ If initialization fails or the Demo does not run, check the product FAQ first, a
 ## What’s next
 
 - [Development guide and basics](/guide/basics): permissions, logging, debugging, and troubleshooting
-- [Urovo Device API](/urovo-customer-api/): device and system capabilities
 - [Print development](/printer/pos/): POS thermal printing
 - [Scanning development](/scanning/): scanner integration
 - [RFID development](/rfid/): inventory and tag operations

@@ -84,7 +84,6 @@ If you still need support, include the device model, OS version, SDK version, re
 Continue with the guide that matches your product:
 
 - [Quick start](/guide/quick-start)
-- [Urovo Device API](/urovo-customer-api/)
 - [Print development](/printer/pos/)
 - [Cradle development](/cradle/)
 - [Scanning development](/scanning/)

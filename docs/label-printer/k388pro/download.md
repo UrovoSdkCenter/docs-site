@@ -1,15 +1,19 @@
 # Download & Demo
 
-Offline API documentation for the K388Pro **built-in printer** SDK. Files are under `downloads/k388pro/`.
+SDK package and offline API documentation for the K388Pro **built-in printer**. Files are under `downloads/k388pro/`.
 
 ## Downloads
 
 | File | Description | Download |
 |------|-------------|----------|
-| `k388-printer-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-docs.zip) |
+| `K388Pro_Printer_SDK.zip` | Built-in print SDK package (JAR / Demo, etc.) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/K388Pro_Printer_SDK.zip) |
+| `k388-printer-sdk-sdk-docs.html` | Offline API docs (open in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-sdk-docs.html) |
+
+Browse folder: https://github.com/UrovoSdkCenter/docs-site/tree/main/downloads/k388pro
 
 ## Usage
 
-1. Download the zip, extract it, then open the HTML locally in a browser (ZH/EN switch and API search included).
-2. Online API reference: [API Reference](/label-printer/k388pro/).
-3. Bluetooth version: [K388Pro BLE](/label-printer/k388pro-ble/).
+1. Unzip `K388Pro_Printer_SDK.zip` and follow the package instructions to add the JAR / Demo.
+2. The offline API doc is a single HTML page—open it locally in a browser (ZH/EN switch and API search included).
+3. Online API reference: [API Reference](/label-printer/k388pro/).
+4. Bluetooth version: [K388Pro BLE](/label-printer/k388pro-ble/).

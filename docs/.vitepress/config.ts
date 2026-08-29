@@ -10,14 +10,15 @@ const enSidebar = [
     items: [
       { text: 'Quick Start', link: '/guide/quick-start' },
       { text: 'Development Guide and Basics', link: '/guide/basics' },
-      {
-        text: 'Urovo Device API',
-        collapsed: true,
-        items: [
-          { text: 'API Reference', link: '/urovo-customer-api/' },
-          { text: 'Download & Demo', link: '/urovo-customer-api/download' }
-        ]
-      },
+      // Hidden for now:
+      // {
+      //   text: 'Urovo Device API',
+      //   collapsed: true,
+      //   items: [
+      //     { text: 'API Reference', link: '/urovo-customer-api/' },
+      //     { text: 'Download & Demo', link: '/urovo-customer-api/download' }
+      //   ]
+      // },
       {
         text: 'Print Development',
         collapsed: true,
@@ -82,14 +83,15 @@ const zhSidebar = [
     items: [
       { text: '快速入门', link: '/zh/guide/quick-start' },
       { text: '开发指南与基础', link: '/zh/guide/basics' },
-      {
-        text: 'Urovo 设备 API',
-        collapsed: true,
-        items: [
-          { text: 'API 参考', link: '/zh/urovo-customer-api/' },
-          { text: '下载和 Demo', link: '/zh/urovo-customer-api/download' }
-        ]
-      },
+      // 暂时隐藏：
+      // {
+      //   text: 'Urovo 设备 API',
+      //   collapsed: true,
+      //   items: [
+      //     { text: 'API 参考', link: '/zh/urovo-customer-api/' },
+      //     { text: '下载和 Demo', link: '/zh/urovo-customer-api/download' }
+      //   ]
+      // },
       {
         text: 'Print 开发',
         collapsed: true,

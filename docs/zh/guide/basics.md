@@ -84,7 +84,6 @@
 选择与你的业务对应的专题继续阅读：
 
 - [快速入门](/zh/guide/quick-start)
-- [Urovo 设备 API](/zh/urovo-customer-api/)
 - [Print 开发](/zh/printer/pos/)
 - [Cradle 开发](/zh/cradle/)
 - [扫码开发](/zh/scanning/)
