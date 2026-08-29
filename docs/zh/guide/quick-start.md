@@ -18,7 +18,7 @@
 
 - 设备系统能力 → [Urovo 设备 API](/zh/urovo-customer-api/)
 - 内置热敏打印 → [Print 开发](/zh/printer/pos/)
-- SP35 开发 → [SP35 开发](/zh/cradle/)
+- SP35 开发 → [Cradle 开发](/zh/cradle/)
 - 扫码 → [扫码开发](/zh/scanning/)
 - RFID → [RFID 开发](/zh/rfid/)
 - 贴标机 → [贴标机开发](/zh/label-printer/k388pro/)
@@ -89,5 +89,5 @@ dependencies {
 - [Print 开发](/zh/printer/pos/)：POS 热敏打印
 - [扫码开发](/zh/scanning/)：扫码接入
 - [RFID 开发](/zh/rfid/)：RFID 盘点与读写
-- [SP35 开发](/zh/cradle/)：SP35 底座解锁与控制
+- [Cradle 开发](/zh/cradle/)：SP35 底座解锁与控制
 - [贴标机开发](/zh/label-printer/k388pro/)：K388Pro 本机 / 蓝牙打印

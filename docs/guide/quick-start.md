@@ -18,7 +18,7 @@ Docs on this site are organized by capability. Pick the package that matches you
 
 - Device / system APIs → [Urovo Device API](/urovo-customer-api/)
 - Built-in thermal printing → [Print development](/printer/pos/)
-- SP35 development → [SP35 development](/cradle/)
+- SP35 development → [Cradle Development](/cradle/)
 - Scanning → [Scanning development](/scanning/)
 - RFID → [RFID development](/rfid/)
 - Label printers → [Label printer development](/label-printer/k388pro/)
@@ -89,5 +89,5 @@ If initialization fails or the Demo does not run, check the product FAQ first, a
 - [Print development](/printer/pos/): POS thermal printing
 - [Scanning development](/scanning/): scanner integration
 - [RFID development](/rfid/): inventory and tag operations
-- [SP35 development](/cradle/): SP35 cradle unlock and control
+- [Cradle Development](/cradle/): SP35 cradle unlock and control
 - [Label printer development](/label-printer/k388pro/): K388Pro built-in / BLE printing
