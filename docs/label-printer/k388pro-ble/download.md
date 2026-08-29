@@ -1,18 +1,18 @@
 # Download & Demo
 
-JAR, sample project, and offline API documentation for the K388Pro BLE SDK. Files are under `downloads/k388pro-ble/`.
+SDK package and offline API documentation for the K388Pro BLE printer. Files are under `downloads/k388pro-ble/`.
 
 ## Downloads
 
 | File | Description | Download |
 |------|-------------|----------|
-| `UK388PrintBleLibrary_fat_v1.0.0.jar` | BLE print SDK | [Download JAR](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro-ble/UK388PrintBleLibrary_fat_v1.0.0.jar) |
-| `BtScanPrintDemo-1.0.zip` | Demo source | [Download Demo](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro-ble/BtScanPrintDemo-1.0.zip) |
-| `k388-ble-printer-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro-ble/k388-ble-printer-sdk-docs.zip) |
+| `K388Pro_Ble_Printer_SDK.zip` | BLE print SDK package (JAR / Demo, etc.) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro-ble/K388Pro_Ble_Printer_SDK.zip) |
+| `k388-ble-printer-sdk-sdk-docs.html` | Offline API docs (open in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro-ble/k388-ble-printer-sdk-sdk-docs.html) |
+
+Browse folder: https://github.com/UrovoSdkCenter/docs-site/tree/main/downloads/k388pro-ble
 
 ## Usage
 
-1. Put the JAR in your Android module `libs` folder.
-2. Unzip the Demo and open `BtScanPrintDemo` in Android Studio.
-3. Download the zip, extract it, then open the HTML locally in a browser (ZH/EN switch and API search included).
-4. Online API reference: [API Reference](/label-printer/k388pro-ble/).
+1. Unzip `K388Pro_Ble_Printer_SDK.zip` and follow the package instructions to add the JAR / Demo.
+2. The offline API doc is a single HTML page—open it locally in a browser (ZH/EN switch and API search included).
+3. Online API reference: [API Reference](/label-printer/k388pro-ble/).
