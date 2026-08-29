@@ -18,7 +18,9 @@
 | `PAPER_ERROR` | Paper error |
 | `DISCONNECTED` | Not connected |
 | `COMMUNICATION_ERROR` | Communication failed |
-| `UNKNOWN_ERROR` | Unknown error |
+| `UNKNOWN_ERROR` | Unknown error (includes upgrading) |
+| `BUSY` | Busy (reserved) |
+| `OVERHEATED` | Overheated (reserved) |
 
 ```java
 PrinterStatus status = printer.getPrinterStatus();

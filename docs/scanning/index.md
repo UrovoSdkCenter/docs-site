@@ -1,10 +1,8 @@
-# 扫码概述
+---
+layout: page
+outline: false
+sdkHtml: scanning/scanner-sdk-docs.html
+sdkHtmlLang: zh
+---
 
-扫码能力接入与结果回调说明。
-
-## 能力范围
-
-- 一维码 / 二维码识别
-- 连续扫码与单次扫码
-
-下一篇：[接入示例](/scanning/sample)
+<SdkHtmlDoc />

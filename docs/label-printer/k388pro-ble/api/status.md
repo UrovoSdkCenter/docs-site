@@ -18,7 +18,9 @@
 | `PAPER_ERROR` | 纸张异常 |
 | `DISCONNECTED` | 未连接 |
 | `COMMUNICATION_ERROR` | 通信失败 |
-| `UNKNOWN_ERROR` | 未知错误 |
+| `UNKNOWN_ERROR` | 未知错误（含升级中） |
+| `BUSY` | 忙（预留） |
+| `OVERHEATED` | 过热（预留） |
 
 ```java
 PrinterStatus status = printer.getPrinterStatus();

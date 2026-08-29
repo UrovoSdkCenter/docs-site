@@ -2,9 +2,9 @@
 
 从 [下载页](/label-printer/download) 获取 SDK 后，按下面步骤接入工程。
 
-## 添加 SDK
+## 获取 SDK
 
-将 `UK388PrintBleLibrary_fat_v1.0.0.jar` 复制到模块的 `libs` 目录，并添加：
+推荐 fat jar（含组包类）：
 
 ```gradle
 dependencies {
@@ -14,9 +14,9 @@ dependencies {
 
 如果使用拆分 JAR，需要同时引入 BLE 库和指令构建库。
 
-## 权限
+## 工程配置
 
-在 `AndroidManifest.xml` 中声明：
+在应用 `AndroidManifest.xml` 声明并动态申请：
 
 ```xml
 <uses-permission android:name="android.permission.BLUETOOTH"
@@ -30,10 +30,10 @@ dependencies {
 
 运行时权限：
 
-| Android 版本 | 所需权限 |
-|--------------|----------|
-| Android 12 及以上 | `BLUETOOTH_CONNECT`、`BLUETOOTH_SCAN` |
-| Android 11 及以下 | 定位权限（用于扫描设备） |
+| 系统 | 运行时权限 |
+|------|------------|
+| Android 12+ | `BLUETOOTH_CONNECT`、`BLUETOOTH_SCAN` |
+| Android 11 及以下 | 扫描时需定位权限 |
 
 ## BLE 特征
 
@@ -41,7 +41,17 @@ dependencies {
 
 | 方向 | UUID |
 |------|------|
-| 打印机 → 应用（Notify） | `0000fff1-0000-1000-8000-00805f9b34fb` |
-| 应用 → 打印机（Write） | `0000fff2-0000-1000-8000-00805f9b34fb` |
+| 打印机 → App（Notify） | `0000fff1-0000-1000-8000-00805f9b34fb` |
+| App → 打印机（Write） | `0000fff2-0000-1000-8000-00805f9b34fb` |
+
+无 API Key。混淆请 keep：`com.urovo.printer.ble.**` 与 `com.urovo.printer.**`。
+
+## 初始化
+
+```java
+BlePrinterManager printer = BlePrinterManager.getInstance(context);
+```
+
+首次必须传入 `Context`（建议 `Application` Context）。无鉴权配置项。
 
 下一步：[快速开始](/label-printer/k388pro-ble/quick-start)

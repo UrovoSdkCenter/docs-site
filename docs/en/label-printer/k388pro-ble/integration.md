@@ -2,9 +2,9 @@
 
 Download the SDK from the [download page](/en/label-printer/download), then follow the steps below.
 
-## Add the SDK
+## Obtain the SDK
 
-Copy `UK388PrintBleLibrary_fat_v1.0.0.jar` into your module `libs` folder and add:
+Recommended fat JAR (includes page-builder classes):
 
 ```gradle
 dependencies {
@@ -14,9 +14,9 @@ dependencies {
 
 If you use split JARs, include both the BLE library and the command-builder library.
 
-## Permissions
+## Project setup
 
-Declare in `AndroidManifest.xml`:
+Declare in `AndroidManifest.xml` and request at runtime:
 
 ```xml
 <uses-permission android:name="android.permission.BLUETOOTH"
@@ -32,7 +32,7 @@ Runtime permissions:
 
 | Android version | Required permissions |
 |-----------------|----------------------|
-| Android 12 and later | `BLUETOOTH_CONNECT`, `BLUETOOTH_SCAN` |
+| Android 12+ | `BLUETOOTH_CONNECT`, `BLUETOOTH_SCAN` |
 | Android 11 and earlier | Location permission (for device scan) |
 
 ## BLE characteristics
@@ -43,5 +43,15 @@ These UUIDs are built into the SDK. Applications do not need to configure them:
 |-----------|------|
 | Printer → App (Notify) | `0000fff1-0000-1000-8000-00805f9b34fb` |
 | App → Printer (Write) | `0000fff2-0000-1000-8000-00805f9b34fb` |
+
+No API key. ProGuard keep: `com.urovo.printer.ble.**` and `com.urovo.printer.**`.
+
+## Initialization
+
+```java
+BlePrinterManager printer = BlePrinterManager.getInstance(context);
+```
+
+Pass a `Context` on first use (prefer Application Context). There is no auth configuration.
 
 Next: [Quick Start](/en/label-printer/k388pro-ble/quick-start)

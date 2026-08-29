@@ -1,0 +1,17 @@
+/* keep default theme look; accordion is behavior-only */
+
+/* Full-bleed embedded SDK HTML docs */
+.VPDoc:has(.sdk-html-doc) .container,
+.VPDoc:has(.sdk-html-doc) .content,
+.VPDoc:has(.sdk-html-doc) .content-container {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+.VPDoc:has(.sdk-html-doc) .aside {
+  display: none;
+}
+
+.VPDoc:has(.sdk-html-doc) .aside-container {
+  display: none;
+}

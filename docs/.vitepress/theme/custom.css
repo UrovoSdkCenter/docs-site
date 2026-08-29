@@ -1,0 +1,36 @@
+/* 收窄左侧菜单 */
+:root {
+  --vp-sidebar-width: 220px;
+}
+
+.VPSidebar {
+  width: var(--vp-sidebar-width) !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+}
+
+.VPSidebar .item .text,
+.VPSidebar .item .link > .text {
+  font-size: 13px;
+}
+
+@media (min-width: 1440px) {
+  .VPSidebar {
+    padding-left: 20px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .VPNavBar.has-sidebar .title,
+  .VPNavBar.has-sidebar .content {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .VPDoc.has-sidebar .content {
+    padding-left: 24px !important;
+  }
+}

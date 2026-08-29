@@ -1,36 +1,23 @@
 # Download & Demo
 
-Download links on this page go directly to the GitHub **Releases** page of the RFID_Android repository.
+UHF / RFID SDK development docs package and offline API documentation. Files are under `downloads/rfid/`.
 
-## Download SDK / Demo
+## Downloads
 
-<a href="https://github.com/UrovoSdkCenter/RFID_Android/releases" target="_blank" rel="noopener noreferrer">
-  <Badge type="tip" text="Open Releases to Download" />
-</a>
+| File | Description | Download |
+|------|-------------|----------|
+| `UHF_SDK_Development_Docs_v2.6.0609.zip` | UHF SDK Development Docs package (v2.6.0609) | [Download package](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/rfid/UHF_SDK_Development_Docs_v2.6.0609.zip) |
+| `ubx-rfid-sdk-docs.html` | Offline API docs (open in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/rfid/ubx-rfid-sdk-docs.html) |
 
-**Download URL:**
+## SDK / Demo (GitHub Releases)
+
+Official SDK (`.aar`) and Demo projects are still published on the source repository Releases page:
 
 https://github.com/UrovoSdkCenter/RFID_Android/releases
 
-From Releases you can get:
+Source repository: https://github.com/UrovoSdkCenter/RFID_Android
 
-- SDK (`.aar`) assets
-- Demo project archives (when published)
-- Release notes
+## Usage
 
-::: tip If Releases is empty
-Publish a GitHub Release and upload the `.aar` / Demo zip. This docs link does not need to change.
-:::
-
-## Source Repository
-
-- Repo: https://github.com/UrovoSdkCenter/RFID_Android
-- Clone:
-
-```bash
-git clone https://github.com/UrovoSdkCenter/RFID_Android.git
-```
-
-## Source ZIP (fallback)
-
-https://github.com/UrovoSdkCenter/RFID_Android/archive/refs/heads/main.zip
+1. Unzip the docs package, or open the HTML file locally in a browser.
+2. Online API reference: [API Reference](/en/rfid/).

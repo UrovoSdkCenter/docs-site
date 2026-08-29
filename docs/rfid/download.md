@@ -1,40 +1,23 @@
-# 下载与 Demo
+# 下载和 Demo
 
-本页下载入口直接指向 GitHub 仓库的 **Releases（下载）** 页面。
+本页提供 UHF / RFID SDK 开发文档包与离线 API 文档。文件在仓库目录 `downloads/rfid/`。
 
-## 下载 SDK / Demo
+## 下载列表
 
-<a href="https://github.com/UrovoSdkCenter/RFID_Android/releases" target="_blank" rel="noopener noreferrer">
-  <Badge type="tip" text="前往 Releases 下载" />
-</a>
+| 文件 | 说明 | 下载 |
+|------|------|------|
+| `UHF_SDK_Development_Docs_v2.6.0609.zip` | UHF SDK 开发文档包（v2.6.0609） | [下载文档包](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/rfid/UHF_SDK_Development_Docs_v2.6.0609.zip) |
+| `ubx-rfid-sdk-docs.html` | 离线 API 文档（双击用浏览器打开） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/rfid/ubx-rfid-sdk-docs.html) |
 
-**下载地址（点击即打开下载页）：**
+## SDK / Demo（GitHub Releases）
+
+正式 SDK（`.aar`）与 Demo 工程仍从源码仓库 Releases 获取：
 
 https://github.com/UrovoSdkCenter/RFID_Android/releases
 
-在 Releases 页面可下载：
+源码仓库：https://github.com/UrovoSdkCenter/RFID_Android
 
-- SDK（`.aar`）附件
-- Demo 工程压缩包（若已发布）
-- 版本说明与更新日志
+## 使用说明
 
-::: tip 若 Releases 为空
-请到仓库发布 Release，并上传 `.aar` / Demo zip。发布后，上述链接无需修改，用户打开即可看到下载文件。
-:::
-
-## 源码仓库
-
-如需浏览或克隆完整工程：
-
-- 仓库：https://github.com/UrovoSdkCenter/RFID_Android
-- 克隆：
-
-```bash
-git clone https://github.com/UrovoSdkCenter/RFID_Android.git
-```
-
-## 下载源码 ZIP（备用）
-
-若不使用 Releases，也可直接下载当前分支源码包：
-
-https://github.com/UrovoSdkCenter/RFID_Android/archive/refs/heads/main.zip
+1. 解压文档包，或直接下载 HTML 本地双击浏览。
+2. 在线 API 参考见 [API 参考](/rfid/)。
