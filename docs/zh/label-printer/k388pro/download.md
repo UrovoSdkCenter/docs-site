@@ -1,19 +1,29 @@
 # 下载和 Demo
 
-本页提供 K388Pro **本机打印** SDK 包与离线 API 文档。文件在仓库目录 `downloads/k388pro/`。
+K388Pro 打印 SDK **v2.4.0** — **本机 + 蓝牙**统一入口（`UK388PrintLibrary_v2.4.0.jar`）。文件在仓库目录 `downloads/k388pro/`。
 
 ## 下载列表
 
 | 文件 | 说明 | 下载 |
 |------|------|------|
-| `K388Pro_Printer_SDK.zip` | 本机打印 SDK 包（含 JAR / Demo 等） | [下载 SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/K388Pro_Printer_SDK.zip) |
+| `K388Pro_Printer_SDK.zip` | SDK v2.4.0 完整包（`SDK/` JAR、`DemoCode/`、`DemoAPK/`、`Docs/`） | [下载 SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/K388Pro_Printer_SDK.zip) |
 | `k388-printer-sdk-sdk-docs.html` | 离线 API 文档（双击用浏览器打开） | [下载离线 API 文档](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-sdk-docs.html) |
 
 目录浏览：https://github.com/UrovoSdkCenter/docs-site/tree/main/downloads/k388pro
 
+## 包内结构
+
+| 路径 | 说明 |
+|------|------|
+| `SDK/UK388PrintLibrary_v2.4.0.jar` | 打印库（本机 + BLE） |
+| `DemoCode/K388BlePrinterDemo/` | Demo 工程源码 |
+| `DemoAPK/app-debug.apk` | 可安装 Demo APK |
+| `Docs/k388-printer-2.4.0.html` | 离线 API 文档（与上方 HTML 内容一致） |
+
 ## 使用说明
 
-1. 解压 `K388Pro_Printer_SDK.zip`，按包内说明将 JAR / Demo 接入工程。
-2. 离线 API 文档为单页 HTML，本地双击即可浏览（含中英切换与 API 检索）。
-3. 在线 API 参考见 [API 参考](/zh/label-printer/k388pro/)。
-4. 蓝牙外接版本见 [K388Pro 蓝牙版本](/zh/label-printer/k388pro-ble/)。
+1. 解压 `K388Pro_Printer_SDK.zip`。
+2. 将 `SDK/UK388PrintLibrary_v2.4.0.jar` 放入工程 `libs/`（或直接参考 `DemoCode/K388BlePrinterDemo`）。
+3. 安装 `DemoAPK/app-debug.apk`，可验证本机 / 蓝牙打印。
+4. 在线 API 参考见 [API 参考](/zh/label-printer/k388pro/)。
+5. 如需旧版仅蓝牙包，见 [K388Pro 蓝牙版本](/zh/label-printer/k388pro-ble/)。
