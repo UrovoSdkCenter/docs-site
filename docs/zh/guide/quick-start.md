@@ -88,4 +88,4 @@ dependencies {
 - [扫码开发](/zh/scanning/)：扫码接入
 - [RFID 开发](/zh/rfid/)：RFID 盘点与读写
 - [Cradle 开发](/zh/cradle/)：SP35 底座解锁与控制
-- [贴标机开发](/zh/label-printer/k388pro/)：K388Pro 本机 / 蓝牙打印
+- [贴标机开发](/zh/label-printer/k388pro/)：K388Pro 本机 + 蓝牙统一打印

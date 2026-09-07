@@ -88,4 +88,4 @@ If initialization fails or the Demo does not run, check the product FAQ first, a
 - [Scanning development](/scanning/): scanner integration
 - [RFID development](/rfid/): inventory and tag operations
 - [Cradle Development](/cradle/): SP35 cradle unlock and control
-- [Label printer development](/label-printer/k388pro/): K388Pro built-in / BLE printing
+- [Label printer development](/label-printer/k388pro/): K388Pro Local + BLE printing

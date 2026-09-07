@@ -55,22 +55,8 @@ const enSidebar = [
         text: 'Label Printer Development',
         collapsed: true,
         items: [
-          {
-            text: 'K388Pro',
-            collapsed: true,
-            items: [
-              { text: 'API Reference', link: '/label-printer/k388pro/' },
-              { text: 'Download & Demo', link: '/label-printer/k388pro/download' }
-            ]
-          },
-          {
-            text: 'K388Pro BLE',
-            collapsed: true,
-            items: [
-              { text: 'API Reference', link: '/label-printer/k388pro-ble/' },
-              { text: 'Download & Demo', link: '/label-printer/k388pro-ble/download' }
-            ]
-          }
+          { text: 'API Reference', link: '/label-printer/k388pro/' },
+          { text: 'Download & Demo', link: '/label-printer/k388pro/download' }
         ]
       }
     ]
@@ -128,22 +114,8 @@ const zhSidebar = [
         text: '贴标机开发',
         collapsed: true,
         items: [
-          {
-            text: 'K388Pro',
-            collapsed: true,
-            items: [
-              { text: 'API 参考', link: '/zh/label-printer/k388pro/' },
-              { text: '下载和 Demo', link: '/zh/label-printer/k388pro/download' }
-            ]
-          },
-          {
-            text: 'K388Pro 蓝牙版本',
-            collapsed: true,
-            items: [
-              { text: 'API 参考', link: '/zh/label-printer/k388pro-ble/' },
-              { text: '下载和 Demo', link: '/zh/label-printer/k388pro-ble/download' }
-            ]
-          }
+          { text: 'API 参考', link: '/zh/label-printer/k388pro/' },
+          { text: '下载和 Demo', link: '/zh/label-printer/k388pro/download' }
         ]
       }
     ]

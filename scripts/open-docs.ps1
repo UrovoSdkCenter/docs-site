@@ -15,7 +15,7 @@ try {
     exit 1
 }
 
-Start-Process 'http://127.0.0.1:8080/label-printer/k388pro-ble/'
+Start-Process 'http://127.0.0.1:8080/label-printer/k388pro/'
 
 $mime = @{
     '.html' = 'text/html; charset=utf-8'

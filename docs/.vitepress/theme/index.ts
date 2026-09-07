@@ -26,14 +26,6 @@ const API_TO_DOWNLOAD: Array<{ test: RegExp; download: string }> = [
   {
     test: /^\/label-printer\/k388pro\/?$/,
     download: '/label-printer/k388pro/download'
-  },
-  {
-    test: /^\/zh\/label-printer\/k388pro-ble\/?$/,
-    download: '/zh/label-printer/k388pro-ble/download'
-  },
-  {
-    test: /^\/label-printer\/k388pro-ble\/?$/,
-    download: '/label-printer/k388pro-ble/download'
   }
 ]
 
