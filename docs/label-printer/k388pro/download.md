@@ -7,7 +7,7 @@ K388Pro Print SDK **v2.4.2** — unified **Local + BLE** entry (`UK388PrintLibra
 | File | Description | Download |
 |------|-------------|----------|
 | `K388Pro_Printer_SDK.zip` | SDK v2.4.2 package (`SDK/` JAR, `DemoCode/`, `DemoAPK/`, `Docs/`) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/K388Pro_Printer_SDK.zip) |
-| `k388-printer-sdk-sdk-docs.html` | Offline API docs (open in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-sdk-docs.html) |
+| `k388-printer-sdk-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-sdk-docs.zip) |
 
 ## Package contents
 
@@ -16,7 +16,7 @@ K388Pro Print SDK **v2.4.2** — unified **Local + BLE** entry (`UK388PrintLibra
 | `SDK/UK388PrintLibrary_v2.4.2.jar` | Print library (Local + BLE) |
 | `DemoCode/K388BlePrinterDemo/` | Sample Android project |
 | `DemoAPK/app-debug.apk` | Installable demo APK |
-| `Docs/k388-printer-2.4.2.html` | Offline API documentation (same content as the HTML above) |
+| `Docs/k388-printer-2.4.2.html` | Offline API documentation (same content as the docs zip) |
 
 ## Usage
 
