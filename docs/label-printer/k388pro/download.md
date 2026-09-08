@@ -1,26 +1,26 @@
 # Download & Demo
 
-K388Pro Print SDK **v2.4.2** — unified **Local + BLE** entry (`UK388PrintLibrary_v2.4.2.jar`). Files are under `downloads/k388pro/`.
+K388Pro Print SDK **v2.4.3** — unified **Local + BLE** entry (`UK388PrintLibrary_v2.4.3.jar`). Files are under `downloads/k388pro/`.
 
 ## Downloads
 
 | File | Description | Download |
 |------|-------------|----------|
-| `K388Pro_Printer_SDK.zip` | SDK v2.4.2 package (`SDK/` JAR, `DemoCode/`, `DemoAPK/`, `Docs/`) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/K388Pro_Printer_SDK.zip) |
+| `K388Pro_Printer_SDK.zip` | SDK v2.4.3 package (`SDK/` JAR, `DemoCode/`, `DemoAPK/`, `Docs/`) | [Download SDK](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/K388Pro_Printer_SDK.zip) |
 | `k388-printer-sdk-sdk-docs.zip` | Offline API docs package (zip; extract and open the HTML in a browser) | [Download offline API docs](https://github.com/UrovoSdkCenter/docs-site/raw/main/downloads/k388pro/k388-printer-sdk-sdk-docs.zip) |
 
 ## Package contents
 
 | Path | Description |
 |------|-------------|
-| `SDK/UK388PrintLibrary_v2.4.2.jar` | Print library (Local + BLE) |
+| `SDK/UK388PrintLibrary_v2.4.3.jar` | Print library (Local + BLE) |
 | `DemoCode/K388BlePrinterDemo/` | Sample Android project |
-| `DemoAPK/app-debug.apk` | Installable demo APK |
-| `Docs/k388-printer-2.4.2.html` | Offline API documentation (same content as the docs zip) |
+| `DemoAPK/K388BlePrinterDemo_v2.4.3.apk` | Installable demo APK |
+| `Docs/k388-printer-2.4.3.html` | Offline API documentation (same content as the docs zip) |
 
 ## Usage
 
 1. Unzip `K388Pro_Printer_SDK.zip`.
-2. Add `SDK/UK388PrintLibrary_v2.4.2.jar` to your app `libs/` (or open `DemoCode/K388BlePrinterDemo` as a reference).
-3. Install `DemoAPK/app-debug.apk` on a device to try Local / BLE printing.
+2. Add `SDK/UK388PrintLibrary_v2.4.3.jar` to your app `libs/` (or open `DemoCode/K388BlePrinterDemo` as a reference).
+3. Install `DemoAPK/K388BlePrinterDemo_v2.4.3.apk` on a device to try Local / BLE printing.
 4. Online API reference: [API Reference](/label-printer/k388pro/).
